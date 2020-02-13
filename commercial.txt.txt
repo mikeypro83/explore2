@@ -1,0 +1,8 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// commercial license for source-code used in explore2 (project name, finished product name is pending)
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// license: Source-code may be modified and redistributed under a freeware license, but may not 
+//	be sold as the licensee's product. The original source-code and product are property of
+//	the original author(s) and may not be used in any way outside of this license without 
+//	written permission from original author(s).
+/////////////////////////////////////////////////////////////////////////////////////////////////

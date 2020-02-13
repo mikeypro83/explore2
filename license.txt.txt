@@ -1,0 +1,9 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// license for source-code used in explore2 (project name, finished product name is pending)
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// license: modified freeware, open-source: Original attribution of work is required for all
+//	distributions of derived and original versions of this work. Failure to provide a
+//	visible and apparent notice of original attribution defaults any derived work to a 
+//	commercial license and therefore applicable fees will apply for licensing said work. 
+//	(see commercial.txt)
+/////////////////////////////////////////////////////////////////////////////////////////////////
