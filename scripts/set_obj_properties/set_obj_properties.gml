@@ -1,16 +1,18 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
-/// @description select_next_asteroid()
+/// @description set_obj_properties
+/// @param {string} Name
+/// @param 
+/// @param 
 /// @param 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // ADDITIONAL INFO FOR USE:
-// 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // author: michael scott stuart (mikeypro83)
 // email: michaelscottstuart@yahoo.com
+// license: modified freeware, open-source: Original attribution of work required for all
+//			distributions of derived and original versions of this work.
 /////////////////////////////////////////////////////////////////////////////////////////////////
-{
-	global.iTabSelectedAsteroid++;
-	if(global.iTabSelectedAsteroid>global.asteroid_count-1)
-		global.iTabSelectedAsteroid=0;
-	return;
-}
+
+self.ingame.Name = argument[0];
+self.ingame.Desc = "Blah";
+self.ingame.PoopyDiaper = true;

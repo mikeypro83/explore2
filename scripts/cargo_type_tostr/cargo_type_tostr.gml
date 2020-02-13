@@ -7,8 +7,6 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // author: michael scott stuart (mikeypro83)
 // email: michaelscottstuart@yahoo.com
-// license: modified freeware, open-source: Original attribution of work required for all
-//			distributions of derived and original versions of this work.
 /////////////////////////////////////////////////////////////////////////////////////////////////
 {	
 	return cargo_type_str[argument[0]];

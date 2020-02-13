@@ -12,21 +12,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // author: michael scott stuart (mikeypro83)
 // email: michaelscottstuart@yahoo.com
+// license: modified freeware, open-source: Original attribution of work is required for all
+//			distributions of derived and original versions of this work. Failure to provide a
+//			visible and apparent notice of original attribution defaults any derived work to a 
+//			commercial license and therefore applicable fees will apply for licensing said work. 
+//			(see commercial.txt)
 /////////////////////////////////////////////////////////////////////////////////////////////////
-{
-	if ( argument_count < 3 )
-		show_error("draw_texts: not enough arguments", true);
-	_h = 0; // Pixels height of each row
-	global.draw_texts_auto_height = 
-		(variable_global_exists("draw_texts_auto_height")) ? global.draw_texts_auto_height : 0;	
-	_h = (global.draw_texts_auto_height < 1) ? string_height("0QDJT") : global.draw_texts_auto_height;
-	// Start looping through arguments after the x,y parameters (0 and 1)	
-	for(_dtc = 2; _dtc < argument_count; ++_dtc)
-	{		
-		_str = argument[_dtc];		
-		draw_text_c(argument[0],argument[1],_str);
-		argument[1] += _h;
-	}
-
-	return;
-}

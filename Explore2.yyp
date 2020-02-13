@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "232a55d1-9a74-4517-b7a4-a4ba6ea546ab",
+            "Value": {
+                "id": "dcc310a2-5188-49cd-a988-d915f4d52b0c",
+                "resourcePath": "scripts\\create_obj_properties\\create_obj_properties.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2532bf33-5ab7-4ff0-a9dc-ae9675c23721",
             "Value": {
                 "id": "abae43c0-e7b7-4410-b4c4-388178fe78ee",
@@ -215,6 +223,14 @@
             }
         },
         {
+            "Key": "4df24904-19f7-4452-a806-0cb747d34bbf",
+            "Value": {
+                "id": "ea8a9950-edf1-4fd0-a24a-0c988f49296d",
+                "resourcePath": "datafiles_yy\\commercial.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "4f13c93a-a135-47df-93d1-99a4bf0bc653",
             "Value": {
                 "id": "78b769a0-7433-4c4e-a4de-52def85786ae",
@@ -247,10 +263,18 @@
             }
         },
         {
+            "Key": "57484cb7-f5f4-4f66-b9d3-20ad63882c89",
+            "Value": {
+                "id": "759dbb5d-ef98-45eb-b7f8-ab52066f3d1b",
+                "resourcePath": "notes\\Begin Source Snippet.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "5d7d2ca2-ac4b-47b3-ab27-0e027d7022bc",
             "Value": {
                 "id": "f11203f2-c425-4422-922a-ebddef1265c6",
-                "resourcePath": "rooms\\rmStart\\rmStart.yy",
+                "resourcePath": "rooms\\rmAsteroids\\rmAsteroids.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -423,6 +447,22 @@
             }
         },
         {
+            "Key": "cc9e02fa-f7b7-4d02-85f5-085158d61f95",
+            "Value": {
+                "id": "43bc6941-08e1-4930-8599-85d1c85c93c6",
+                "resourcePath": "datafiles_yy\\license.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "cdb714c6-77e0-41c7-a488-8dfe77516298",
+            "Value": {
+                "id": "dd86ce88-aae6-4baa-93da-e4f57693ebb0",
+                "resourcePath": "rooms\\rmPlanet\\rmPlanet.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "d0162abe-af8b-4e8c-9ef8-b00b97fefa76",
             "Value": {
                 "id": "d4358b5a-32d7-4927-a1e3-1100540deb0b",
@@ -492,7 +532,8 @@
         "c04fed9d-b88b-43df-a2c7-f45ccd2a62ad",
         "4af2e7d8-30af-4be4-813d-7fefd6b3a9fa",
         "978a8ef5-be71-4b60-ba63-38fa5a97506a",
-        "c70865dd-7d12-4892-a373-bb017c65fb84"
+        "c70865dd-7d12-4892-a373-bb017c65fb84",
+        "232a55d1-9a74-4517-b7a4-a4ba6ea546ab"
     ],
     "tutorial": ""
 }

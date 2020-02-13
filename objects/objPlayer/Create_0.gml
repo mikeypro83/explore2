@@ -1,7 +1,7 @@
 /// @description Setup Default Properties
 // You can write your code in this editor
 
-self.Name = "Player";
+create_obj_properties("Player");
 
 x = window_get_width() / 2;
 y = window_get_height() / 2;

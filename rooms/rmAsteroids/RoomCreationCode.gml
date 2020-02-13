@@ -1,4 +1,3 @@
-
 ///////////////////////////////
 // CONTROL KEY BINDS
 ///////////////////////////////
@@ -138,7 +137,6 @@ global.oSystemInfoPanel = instance_create_layer(0,0,"Instances", objSystemInfoPa
 global.oHelpScreen = instance_create_layer(0,0,"Instances", objHelpScreen);
 global.oCargoHoldPanel = instance_create_layer(0,0,"Instances",objCargoHoldPanel);
 
-global.oTestPlanet = instance_create_layer(512,512,"Instances",objPlanet);
 
 global.iTabSelectedAsteroid = 0; // This is used for tabbing through Asteroids..
 

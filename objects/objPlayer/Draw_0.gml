@@ -32,7 +32,6 @@ _qs = primitive_size/4;
 
 draw_circle_color(_dxx-(1),_dyy,_qs+0.2,c_white,c_dkgray,false);
 
-
 matrix_set(matrix_world,mid);
 
 

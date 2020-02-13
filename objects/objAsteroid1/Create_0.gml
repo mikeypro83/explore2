@@ -1,25 +1,22 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-self.Name = "Asteroid";
-self.Number = -1;
+self.Name = "Asteroid";		// ?? Type name??
+self.Number = -1;			// This is the index number into the array of asteroids for this asteroid.
+self.damage = 0;
 
+// create a random cargo drop for this asteroid for when it is destroyed
 CargoType = irandom_range(cargo_type.Silica,cargo_type.FrozenH20);
 
-//selected_asteroid = false;
-damage = 0;
-
+// graphics setup
 image_xscale = 1.0;
 image_yscale = 1.0;
 image_blend = choose(c_gray, c_dkgray, c_ltgray);
 rotation_rate = random_range(-1.0,1.0);
-
 primitive_size = random_range(10,40);
 
 // This code creates extra shapes to make asteroids look unique and "interesting"
-
 _halfsize = primitive_size / 2;
-
 shape_count = irandom_range(primitive_size/2,primitive_size);
 shape_xarray = array_create(shape_count,1);
 shape_yarray = array_create(shape_count,1);
@@ -36,7 +33,6 @@ for(i = 0; i < shape_count; ++i)
 }
 
 // This code creates the dots that speckle the asteroids
-
 dot_count = irandom_range(10,40);
 dot_xarray = array_create(dot_count, 1);
 dot_yarray = array_create(dot_count, 1);
