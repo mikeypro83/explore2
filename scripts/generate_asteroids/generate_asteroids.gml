@@ -31,6 +31,6 @@ for(i = 0; i < global.asteroid_count; ++i)
 			break;
 		}
 	}
-	global.Asteroids[i] = instance_create_layer( nx, ny, "Instances", objAsteroid1 );
+	global.Asteroids[i] = instance_create_layer( nx, ny, "Instances", objAsteroid );
 	global.Asteroids[i].Number = i;
 }

@@ -10,6 +10,6 @@ _olcol = draw_get_color();
 _olal = draw_get_alpha();
 draw_set_color(image_blend);
 draw_set_alpha(image_alpha);
-draw_text_c(0,0,Text);
+cdrawstr(0,0,Text);
 draw_set_color(_olcol);
 draw_set_alpha(_olal);

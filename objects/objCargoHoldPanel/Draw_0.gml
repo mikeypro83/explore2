@@ -40,7 +40,7 @@ draw_set_color(c_white);
 
 if(CargoHold!=noone && instance_exists(CargoHold))
 {
-	draw_text_c(2,2,"`[`6[ `FC`7ARGO `FH`7OLD `6]`]          (`7"+ string(CargoHold.CargoUsed) + "`8/`F"+ string(CargoHold.MaxCargo)+"`6)");
+	cdrawstr(2,2,"`[`6[ `FC`7ARGO `FH`7OLD `6]`]          (`7"+ string(CargoHold.CargoUsed) + "`8/`F"+ string(CargoHold.MaxCargo)+"`6)");
 	draw_texts_array(8,get_font_h()+2,
 		cargo_type.CargoCount-1, global.cargo_type_str);
 	

@@ -26,7 +26,7 @@ _y = self.y;
 // Asteroid Collisions w/laser pew
 //////////////////////////////////////////
 
-_inst = instance_nearest(_x,_y, objAsteroid1);
+_inst = instance_nearest(_x,_y, objAsteroid);
 if(_inst != noone)
 {
 	if(distance_between_points(self.x,self.y,_inst.x,_inst.y) < _inst.primitive_size)

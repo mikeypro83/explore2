@@ -12,7 +12,7 @@ m2 = matrix_multiply(m1,matrix_get(matrix_world));
 mid = matrix_build_identity();
 matrix_set(matrix_world,m1);
 
-//draw_text_c(0,0,"`fX");
+//cdrawstr(0,0,"`fX");
 
 draw_set_color(c_red);
 //draw_circle(0,0,planet_size,true);

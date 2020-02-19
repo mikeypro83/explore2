@@ -22,6 +22,19 @@ if(keyboard_check_released(global.keyToggleFullscreen))
 {	
 	global.IsFullscreen = !global.IsFullscreen;
 	window_set_fullscreen(global.IsFullscreen);		
+	
+	if(global.IsFullscreen)
+	{
+		camera_set_view_size(view_camera[0],display_get_width(),display_get_height());
+		surface_resize(application_surface,display_get_width(),display_get_height());		
+	}
+	else
+	{
+		camera_set_view_size(view_camera[0],view_wport[0],view_hport[0]);
+		surface_resize(application_surface,view_wport[0],view_hport[0]);
+	}
+	
+	global.oStars.Resize = true;
 }
 
 if(keyboard_check_released(global.keyToggleDebugInfo))
@@ -67,7 +80,7 @@ direction = image_angle + 90;
 // Collisions w / global.Asteroids
 /////////////////////////////////////////
 
-_inst = instance_nearest(self.x,self.y, objAsteroid1);
+_inst = instance_nearest(self.x,self.y, objAsteroid);
 if(_inst != noone)
 {
 		if (distance_between_points(self.x,self.y,_inst.x,_inst.y) < 

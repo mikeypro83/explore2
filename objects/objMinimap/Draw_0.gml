@@ -31,17 +31,7 @@ draw_rectangle(_dxx,_dyy,_dxx+minimap_size,_dyy+minimap_size,false);
 
 draw_rectangle_color(_dxx,_dyy,_dxx+minimap_size,_dyy+minimap_size,_c1,_c2,_c3,_c4,true);
 
-/// draw asteroid blips
-
 draw_set_color(c_white);
-
-//for(i = 0; i < global.asteroid_count; ++i)
-//{
-//	_x = global.Asteroids[i].x; 
-//	_y = global.oPlayer.y + global.Asteroids[i].y;
-//	//draw_point(_x/4,_y/4);
-//	draw_text(_x,_y,"x");
-//}
 
 lels = layer_get_all_elements("Instances");
 
@@ -52,8 +42,8 @@ for (i = 0; i < array_length_1d(lels); i++;)
 	{		
 		// TYODO SWITCH OBJECT TYPE
 		inst = layer_instance_get_instance(lels[i]);
-		_x = (inst.x/32);
-		_y = (inst.y/32);
+		_x = (inst.x / room_width) * minimap_size;
+		_y = (inst.y / room_height) * minimap_size;
 		
 		if ( (_x > 1 && _x < minimap_size) &&
 			(_y > 1 && _y < minimap_size) )
@@ -64,7 +54,7 @@ for (i = 0; i < array_length_1d(lels); i++;)
 						draw_set_color(c_blue); 
 						draw_circle(_x,_y,2,false);
 						break;					
-					case objAsteroid1:
+					case objAsteroid:
 						if(inst==global.oPlayer.oTarget)
 						{
 							draw_set_color(c_yellow);

@@ -32,7 +32,7 @@
 	for(iaaaa = 0; iaaaa < _len; ++iaaaa)
 	{	
 		_str = _arr[iaaaa];
-		draw_text_c(argument[0],argument[1],_str);
+		cdrawstr(argument[0],argument[1],_str);
 		argument[1] += _h;
 	}
 	return;

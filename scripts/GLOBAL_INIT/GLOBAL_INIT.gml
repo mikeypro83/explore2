@@ -1,3 +1,38 @@
+/*
+
+	TODO:
+			-- create resize script and resize code for all GUI elements.
+			
+			-- create GUI auto-position option (toggles) or user-set (click on title and drag)
+			   -- make it so you can save the GUI positions if user-set
+			
+			-- rework select next asteroid feature to select next object in view (doesn't matter if its a
+				asteroid or not)
+
+			-- finish reorganizing/renaming the scripts and objects
+				-- rename scripts then move to 'new' script folder
+				-- clean up each script's code
+					-- distance_between_points	(rename? clean up code...)
+					-- draw_texts				(rename? clean up..)
+					-- draw_texts_array			(rename? clean up..)
+					-- get_font_h				(rename? clean up..)
+					-- generate_asteroids		(rename? clean up..)
+					-- is_outside_view			(rename? clean up..)
+					-- add_to_cargohold			(rename? clean up..)
+					-- update_cargohold			(rename? clean up..)
+					-- cargo_type_tostr			(rename? clean up..)
+					-- set_shader_blacken		(rename? clean up..)
+					-- create_float_text		(rename? clean up..)
+					-- select_next_asteroid		(this is getting revamped to select_next_object i believe)
+					-- create_obj_properties	(rename? clean up..)
+					-- draw_titled_text_box		(unifinished/not implemented) (rename? clean up..)
+			
+			-- rework game design.. get a concrete idea!!!!!! this shooting from the hip crap is killing me
+			
+			
+
+*/
+
 ///////////////////////////////
 // CONTROL KEY BINDS
 ///////////////////////////////
@@ -137,8 +172,14 @@ global.oSystemInfoPanel = instance_create_layer(0,0,"Instances", objSystemInfoPa
 global.oHelpScreen = instance_create_layer(0,0,"Instances", objHelpScreen);
 global.oCargoHoldPanel = instance_create_layer(0,0,"Instances",objCargoHoldPanel);
 
+global.iTabSelectedAsteroid = 0; // TODO: CHANGE -- This is used for tabbing through Asteroids..
 
-global.iTabSelectedAsteroid = 0; // This is used for tabbing through Asteroids..
+///////////////////////////////
+//
+///////////////////////////////
+
+gpu_set_tex_filter(false);
+
 
 ///////////////////////////////
 // Testing
@@ -146,5 +187,9 @@ global.iTabSelectedAsteroid = 0; // This is used for tabbing through Asteroids..
 
 generate_asteroids();
 
+///////////////////////////////
+// Set the first room
+///////////////////////////////
 
+room_goto_next();
 

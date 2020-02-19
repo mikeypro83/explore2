@@ -24,7 +24,7 @@
 	for(_dtc = 2; _dtc < argument_count; ++_dtc)
 	{		
 		_str = argument[_dtc];		
-		draw_text_c(argument[0],argument[1],_str);
+		cdrawstr(argument[0],argument[1],_str);
 		argument[1] += _h;
 	}
 

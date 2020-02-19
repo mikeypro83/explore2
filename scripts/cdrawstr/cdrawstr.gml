@@ -1,8 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-/// @description draw_textc( X,Y, COLOR-CODED-TEXT-STRING )
+/// @description cdrawstr( X,Y, COLOR-CODED-TEXT-STRING )
 /// @param {real} X X-position to start drawing text
 /// @param {real} Y Y-position to start drawing text
 /// @param {string} Text String
+/// @param {font} Font To Use {optional}
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // ADDITIONAL INFO FOR USE:
 // TODO: COLOR CODES
@@ -10,10 +11,22 @@
 // author: michael scott stuart (mikeypro83)
 // email: michaelscottstuart@yahoo.com
 /////////////////////////////////////////////////////////////////////////////////////////////////
-{
+{	
+	func_name = "cdrawstr";
 	
-	_str = argument[2];
-	if(!is_string(_str)) show_error("draw_text_c: argument[2] is not a string",true);
+	if(argument_count < 3) show_error(func_name+": argument_count < 3 but should have (at least) 3 arguments",true);
+	if(is_nan(argument[0])) show_error(func_name+": argument[0] (X) = \""+string(argument[0])+"\" but should be a number", true);
+	if(is_nan(argument[1])) show_error(func_name+": argument[1] (Y) = \""+string(argument[0])+"\" but should be a number", true);	
+	if(argument_count > 3) 
+	{
+		if(font_exists(argument[3])==false)
+			show_error(func_name+": argument[3] (Font) = \""+string(argument[3])+"\" <- this font does not exist", true);
+		else			
+			draw_set_font(argument[3]);
+	}	
+	if(is_string(argument[2])==false) show_error(func_name+": argument[2] (String) = \""+string(argument[2])+"\" is not a string but should be",true);	
+	
+	_str = argument[2];	
 	_l = string_length(_str);											
 	_dtci = 0;
 	_xx = argument[0];
