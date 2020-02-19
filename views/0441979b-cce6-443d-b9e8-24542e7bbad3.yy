@@ -5,8 +5,6 @@
     "name": "0441979b-cce6-443d-b9e8-24542e7bbad3",
     "children": [
         "9885a330-6e5c-4b93-b87c-b9d1164b713b",
-        "2ed01de0-26d8-40c1-a96b-b17256359189",
-        "ffea38d1-8f2f-46cd-8e75-84647fbd5a55",
         "d09fa83d-98b0-4eeb-bc8a-eaa1af62296f",
         "291aa4e6-57e6-4f35-8851-6a4d6398294f",
         "3f479a27-d3db-43f1-a0b1-073b1c522d2e",

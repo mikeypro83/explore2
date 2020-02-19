@@ -1,8 +1,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
-/// @description draw_texts_array( X,Y, [String Array])
+/// @description cdrawstrs( X,Y, ( [String-Array] | StringX, ..., StringN )
 /// @param {real} X X-position to start drawing text
 /// @param {real} Y Y-position to start drawing text
-/// @param {array} String[] Array of strings to draw
+/// @param {string} [String-Array-OR-String]
+/// @param {string} [...]
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // ADDITIONAL INFO FOR USE:
 // Set global.draw_texts_auto_height variable to < 1 for auto row height calculations, anything
@@ -12,28 +13,31 @@
 // email: michaelscottstuart@yahoo.com
 /////////////////////////////////////////////////////////////////////////////////////////////////
 {
-	if ( argument_count < 3 )
-		show_error("draw_texts: not enough arguments", true);
-	_h = 0; // Pixels height of each row
-	global.draw_texts_auto_height = 
-		(variable_global_exists("draw_texts_auto_height")) ? global.draw_texts_auto_height : 0;	
-	_h = (global.draw_texts_auto_height < 1) ? string_height("0QDJT") : global.draw_texts_auto_height;
-	// Start looping through arguments after the x,y parameters (0 and 1)
-	if(argument_count==4)
+	if(variable_global_exists("cdrawstrs_height")==false)
+		global.cdrawstrs_height=0;
+	_h = global.cdrawstrs_height;
+	
+	if( argument_count < 3 ) show_error("cdrawstrs: not enough arguments", true);
+	
+	_usearray = is_array(argument[2]);
+	_arrsize = _usearray ? array_length_1d(argument[2]) : 0;
+	
+	if(_usearray)
 	{
-		_len = argument[2];
-		_arr = argument[3];
+		for(i=0;i<_arrsize;++i)
+		{
+			cdrawstr(argument[0],argument[1],argument[2][i]);
+			argument[1] += _h;
+		}
 	}
-	else
+	else // _usearray = false
 	{
-		_arr = argument[2];
-		_len = array_length_1d(_arr);
+		for(i=0;i<argument_count-2;++i)
+		{
+			cdrawstr(argument[0],argument[1],argument[i]);
+			argument[1] += _h;
+		}		
 	}
-	for(iaaaa = 0; iaaaa < _len; ++iaaaa)
-	{	
-		_str = _arr[iaaaa];
-		cdrawstr(argument[0],argument[1],_str);
-		argument[1] += _h;
-	}
-	return;
+	
+	return 0;
 }
