@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-panel_size = 256;
+event_inherited();
 self.x = global.cargohold_x;
 self.y = global.cargohold_y;
-depth = -20;
+depth = global.GUIDepth;
 visible = false;
 CargoHold = noone;
+

@@ -1,33 +1,43 @@
 {
-    "id": "b67e2003-8c08-45b6-8441-d24948e88ab4",
+    "id": "87513d7f-ae91-4bee-a560-8287bef5eb7f",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objCargoHoldPanel",
+    "name": "objTextButton",
     "eventList": [
         {
-            "id": "3377dba0-e192-49a7-a850-534f59e7b051",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "b67e2003-8c08-45b6-8441-d24948e88ab4"
-        },
-        {
-            "id": "68e3896b-a577-40f0-bc9c-f601a8e68210",
+            "id": "5ece7afe-67dc-4d09-ae09-0ae1d9052393",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "b67e2003-8c08-45b6-8441-d24948e88ab4"
+            "m_owner": "87513d7f-ae91-4bee-a560-8287bef5eb7f"
+        },
+        {
+            "id": "90fcb631-4271-40b8-8919-b4fa0d6b555c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "87513d7f-ae91-4bee-a560-8287bef5eb7f"
+        },
+        {
+            "id": "4db6e931-d569-427e-9c59-fec716bb71b3",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "87513d7f-ae91-4bee-a560-8287bef5eb7f"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "5a74d4e5-f92c-4c36-82e5-6ac433184472",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

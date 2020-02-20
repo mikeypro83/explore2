@@ -7,6 +7,12 @@ global.oHelpScreen = instance_create_layer(0,0,"Instances", objHelpScreen);
 global.oCargoHoldPanel = instance_create_layer(0,0,"Instances",objCargoHoldPanel);
 
 
+//global.oTestPanel = instance_create_layer(512,612,"Instances",objPanel);
+//global.oTestPanel.Size = 128;
+
+global.oTestButton = instance_create_layer(786,612,"Instances",objTextButton);
+global.oTestButton.Text = "`BQUIT";
+
 ///////////////////////////////
 // Testing
 ///////////////////////////////

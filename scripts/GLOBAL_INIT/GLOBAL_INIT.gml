@@ -1,6 +1,21 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+/// @function GLOBAL_INIT()
+/// @description GLOBAL_INIT - Globals & Startup Stuff
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// author: michael scott stuart (mikeypro83)
+// email: michaelscottstuart@yahoo.com
+// license: modified freeware, open-source: Original attribution of work is required for all
+//			distributions of derived and original versions of this work. Failure to provide a
+//			visible and apparent notice of original attribution defaults any derived work to a 
+//			commercial license and therefore applicable fees will apply for licensing said work. 
+//			(see commercial.txt)
+/////////////////////////////////////////////////////////////////////////////////////////////////
 /*
-
+	DESIGN:
+			-- NO SCROLLING TEXT/ITEM BOXES. DO WITHOUT. NOT WORTH THE TIME AT THIS POINT.
+			-- 
 	TODO:
+			
 			-- create resize script and resize code for all GUI elements.
 			
 			-- create GUI auto-position option (toggles) or user-set (click on title and drag)
@@ -13,9 +28,6 @@
 				-- rename scripts then move to 'new' script folder
 				-- clean up each script's code
 					-- distance_between_points	(rename? clean up code...)
-					-- draw_texts				(rename? clean up..)
-					-- draw_texts_array			(rename? clean up..)
-					-- get_font_h				(rename? clean up..)
 					-- generate_asteroids		(rename? clean up..)
 					-- is_outside_view			(rename? clean up..)
 					-- add_to_cargohold			(rename? clean up..)
@@ -25,7 +37,6 @@
 					-- create_float_text		(rename? clean up..)
 					-- select_next_asteroid		(this is getting revamped to select_next_object i believe)
 					-- create_obj_properties	(rename? clean up..)
-					-- draw_titled_text_box		(unifinished/not implemented) (rename? clean up..)
 			
 			-- rework game design.. get a concrete idea!!!!!! this shooting from the hip crap is killing me
 			
@@ -64,7 +75,11 @@ global.ShowDebugInfo = false;		// TODO: Switch to a few different types, one sho
 global.ShowHelpScreen = true;
 global.ShowCargoPanel = false;
 
-global.pid = 0;		// planet id numbers. temporary for saving surfaces.
+global.pid = 0;		// planet id numbers. temporary for saving surfaces. TODO: REMOVE THIS 
+
+
+global.GUIDepth = -20;
+
 
 ///////////////////////////////
 // GUI ELEMENT POSITIONS
@@ -137,7 +152,7 @@ enum cargo_type {
 	CargoCount
 }
 
-global.cargo_type_str = ["Silica","Iron","Copper","Silver","Gold","Nickel","Uranium","Plutonium","Magnesium","Platinum","FrozenH20","CargoCount"];
+global.cargo_type_str = ["Silica","Iron","Copper","Silver","Gold","Nickel","Uranium","Plutonium","Magnesium","Platinum","FrozenH20",""];
 
 enum align_type {
 	Evil,
@@ -146,7 +161,7 @@ enum align_type {
 	AlignCount
 }
 
-global.align_type_str = ["Evil","Nuetral","Good", "AlignCount"];
+global.align_type_str = ["Evil","Nuetral","Good", ""];
 
 enum obj_type {
 	None,
@@ -157,11 +172,13 @@ enum obj_type {
 	ObjCount
 }
 
-global.obj_type_str = ["None","Player","Asteroid","Ship","Space Station", "ObjCount"];
+global.obj_type_str = ["None","Player","Asteroid","Ship","Space Station", ""];
 
 ///////////////////////////////
 // GLOBAL OBJECTS 
 ///////////////////////////////
+
+global.TextButtonFont1 = smFont1;
 
 //global.oMinimap = instance_create_layer(0,0,"Instances", objMinimap);
 //global.oPlayer = instance_create_layer(0,0,"Instances", objPlayer);

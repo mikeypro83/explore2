@@ -4,4 +4,4 @@
 self.x = global.systeminfo_x;
 self.y = global.systeminfo_y;
 self.panel_size = 128+32;
-depth = -10;
+depth = global.GUIDepth;

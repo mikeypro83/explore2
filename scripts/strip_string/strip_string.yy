@@ -1,8 +1,8 @@
 {
-    "id": "466b378f-5f62-4b59-aef5-1b8d2f2e87a7",
+    "id": "d0e08af9-7c2b-467b-a925-0da2a894c5ff",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "draw_titled_text_box",
+    "name": "strip_string",
     "IsCompatibility": false,
     "IsDnD": false
 }

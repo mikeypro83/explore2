@@ -6,4 +6,4 @@ self.y = global.targetinfo_y;
 
 self.panel_size = 128+32;
 
-depth = -10;
+depth = global.GUIDepth;
