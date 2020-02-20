@@ -34,7 +34,7 @@ draw_set_color(c_white);
 
 //shader_set(smooth_font);
 
-draw_texts(8,8,"`[`E------------------------------------------------------`]",
+cdrawstrs(8,8,"`[`E------------------------------------------------------`]",
 						"`[`FEXPLORE2`] `7-- `FA 2D space shooter/mining game",
 						"`7programming, design, everything: `bmichael scott stuart",
 						"`E------------------------------------------------------",

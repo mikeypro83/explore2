@@ -85,8 +85,7 @@ global.cargohold_y = 256;
 // MY TRICK KNEE
 ///////////////////////////////
 
-global.draw_text_row_h = 9;
-global.draw_text_row_auto = true;		// let draw_text_row auto-calculate string height
+global.cdrawstrs_height = 0;	
 
 ///////////////////////////////
 // TEXT THINGS HERE
@@ -164,13 +163,13 @@ global.obj_type_str = ["None","Player","Asteroid","Ship","Space Station", "ObjCo
 // GLOBAL OBJECTS 
 ///////////////////////////////
 
-global.oMinimap = instance_create_layer(0,0,"Instances", objMinimap);
-global.oPlayer = instance_create_layer(0,0,"Instances", objPlayer);
-global.oStars = instance_create_layer(0,0,"Instances", objStars);
-global.oTargetInfoPanel = instance_create_layer(0,0,"Instances", objTargetInfoPanel);
-global.oSystemInfoPanel = instance_create_layer(0,0,"Instances", objSystemInfoPanel);
-global.oHelpScreen = instance_create_layer(0,0,"Instances", objHelpScreen);
-global.oCargoHoldPanel = instance_create_layer(0,0,"Instances",objCargoHoldPanel);
+//global.oMinimap = instance_create_layer(0,0,"Instances", objMinimap);
+//global.oPlayer = instance_create_layer(0,0,"Instances", objPlayer);
+//global.oStars = instance_create_layer(0,0,"Instances", objStars);
+//global.oTargetInfoPanel = instance_create_layer(0,0,"Instances", objTargetInfoPanel);
+//global.oSystemInfoPanel = instance_create_layer(0,0,"Instances", objSystemInfoPanel);
+//global.oHelpScreen = instance_create_layer(0,0,"Instances", objHelpScreen);
+//global.oCargoHoldPanel = instance_create_layer(0,0,"Instances",objCargoHoldPanel);
 
 global.iTabSelectedAsteroid = 0; // TODO: CHANGE -- This is used for tabbing through Asteroids..
 
@@ -179,13 +178,6 @@ global.iTabSelectedAsteroid = 0; // TODO: CHANGE -- This is used for tabbing thr
 ///////////////////////////////
 
 gpu_set_tex_filter(false);
-
-
-///////////////////////////////
-// Testing
-///////////////////////////////
-
-generate_asteroids();
 
 ///////////////////////////////
 // Set the first room

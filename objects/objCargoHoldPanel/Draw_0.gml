@@ -31,7 +31,7 @@ draw_rectangle_color(_dxx,_dyy,_dxx+panel_size,_dyy+panel_size,_c1,_c2,_c3,_c4,t
 
 // HEADING RECTANGLE
 draw_set_color(make_color_rgb(64,64,64));
-draw_rectangle(2,2,1+panel_size-2,1+get_font_h(),false);
+draw_rectangle(2,2,1+panel_size-2,1+get_fonth(),false);
 
 draw_set_font(smFont1);
 draw_set_color(c_white);
@@ -41,12 +41,12 @@ draw_set_color(c_white);
 if(CargoHold!=noone && instance_exists(CargoHold))
 {
 	cdrawstr(2,2,"`[`6[ `FC`7ARGO `FH`7OLD `6]`]          (`7"+ string(CargoHold.CargoUsed) + "`8/`F"+ string(CargoHold.MaxCargo)+"`6)");
-	draw_texts_array(8,get_font_h()+2,
+	cdrawstrs(8,get_fonth()+2,
 		cargo_type.CargoCount-1, global.cargo_type_str);
 	
 	for(i = 0; i < cargo_type.CargoCount-1; ++i)
 	{	
-		draw_text(128,get_font_h()+2 + i*(get_font_h()), 
+		draw_text(128,get_fonth()+2 + i*(get_fonth()), 
 			string(CargoHold.CargoHold[i]));
 	}
 }

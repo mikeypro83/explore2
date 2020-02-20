@@ -5,7 +5,7 @@ _x = self.x - camera_get_view_x(view_camera[0]);
 _y = self.y - camera_get_view_y(view_camera[0]);
 
 if(global.oPlayer.oTarget!=noone)
-	draw_texts(_x,_y,"itabselected: " + string(global.iTabSelectedAsteroid),
+	cdrawstrs(_x,_y,"itabselected: " + string(global.iTabSelectedAsteroid),
 		"oPlayer.oTarget: " + string(object_get_name(global.oPlayer.oTarget.object_index)) );
 
 

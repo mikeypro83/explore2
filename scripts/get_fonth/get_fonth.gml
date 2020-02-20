@@ -1,8 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
-/// @function get_vector(Vector, Index)
-/// @description returns the value at vector position Index 
-/// @param {vector} The Vector
-/// @param {real} Index
+/// @function get_fonth([Font, optional])
+/// @description Returns the Font's pixel height, will use draw_get_font() if no parameter.
+/// @param {font} Font [optional]
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // ADDITIONAL INFO FOR USE:
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -15,11 +14,15 @@
 //			(see commercial.txt)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 {
-	if(argument_count!=2) show_error("get_vector: requires exactly 2 arguments. Vector, Index",true);
-	if(!is_array(argument[0])) show_error("get_vector: argument[0] must be a 1d-array based vector.",true);
-	if(!is_real(argument[1])) show_error("get_vector: argument[1] must be a real or int value.",true);
-	if(argument[1] > (array_length_1d(argument[0])-1)) show_error("get_vector: argument[1] > size of vector argument[0].",true);
-	if(argument[1] < 0) show_error("get_vector: argument[1] < 0. Must be a range from 0 to size of vector argument[0].",true);	
-	_t = argument[0];
-	return (_t[argument[1]]);
+	_of = draw_get_font();
+	_f = _of;
+	if(argument_count==1)
+	{
+		if (font_exists(argument[0]==false)) show_error("get_fonth: argument[0] is not a font.",true);	
+		_f = argument[0];
+	}
+	if(_f!=_of) draw_set_font(_f);
+	_h = string_height("0QDT#!");
+	if(_f!=_of) draw_set_font(_of);
+	return _h;
 }

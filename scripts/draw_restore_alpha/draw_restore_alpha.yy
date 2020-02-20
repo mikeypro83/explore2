@@ -1,8 +1,8 @@
 {
-    "id": "d09fa83d-98b0-4eeb-bc8a-eaa1af62296f",
+    "id": "c60266a7-f0fa-4b0e-bc3d-ad700eda13f9",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "get_font_h",
+    "name": "draw_restore_alpha",
     "IsCompatibility": false,
     "IsDnD": false
 }
