@@ -15,6 +15,11 @@
 	
 			-- NO SCROLLING TEXT/ITEM BOXES. DO WITHOUT. NOT WORTH THE TIME AT THIS POINT.
 			-- ??
+			-- Object Images are generated in Create Events then converted to sprites!!
+			   that way we stick to the procedurally generated design, BUT also get the flexibility
+			   of sprites. And we get a (major) performance boost for doing it!
+			   
+			-- DESIGN SOLAR SYSTEMS OR GO ORIGINAL DESIGN PLAN ?????? MAKE UP YOUR MIND!!
 			
 	TODO:
 			
