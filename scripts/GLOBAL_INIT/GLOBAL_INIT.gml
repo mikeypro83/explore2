@@ -11,12 +11,14 @@
 //			(see commercial.txt)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /*
-	DESIGN:
+	DESIGN CEMENT:
+	
 			-- NO SCROLLING TEXT/ITEM BOXES. DO WITHOUT. NOT WORTH THE TIME AT THIS POINT.
-			-- 
+			-- ??
+			
 	TODO:
 			
-			-- create resize script and resize code for all GUI elements.
+			-- create resize script and resize code for all GUI elements. (for after fullscreen toggle)
 			
 			-- create GUI auto-position option (toggles) or user-set (click on title and drag)
 			   -- make it so you can save the GUI positions if user-set
@@ -36,11 +38,7 @@
 					-- set_shader_blacken		(rename? clean up..)
 					-- create_float_text		(rename? clean up..)
 					-- select_next_asteroid		(this is getting revamped to select_next_object i believe)
-					-- create_obj_properties	(rename? clean up..)
-			
-			-- rework game design.. get a concrete idea!!!!!! this shooting from the hip crap is killing me
-			
-			
+					-- create_obj_properties	(rename? clean up..)			
 
 */
 

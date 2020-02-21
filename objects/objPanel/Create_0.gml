@@ -9,4 +9,5 @@
 	Color3 = make_color_rgb(96,96,96);
 	Color4 = make_color_rgb(64,64,128);
 	Font = smFont1;
+	
 }

@@ -13,3 +13,4 @@ draw_set_alpha(image_alpha);
 cdrawstr(0,0,Text);
 draw_set_color(_olcol);
 draw_set_alpha(_olal);
+matrix_set(matrix_world,mid);

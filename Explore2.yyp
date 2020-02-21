@@ -159,14 +159,6 @@
             }
         },
         {
-            "Key": "33dc0599-f139-455b-b37d-7227d78d37c2",
-            "Value": {
-                "id": "94d34ee6-5471-4a76-b78a-d157f5298d4b",
-                "resourcePath": "objects\\objAsteroid\\objAsteroid.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "34db8c05-ed84-4edf-8486-3a5137a3a821",
             "Value": {
                 "id": "a3da49cc-6880-40c6-a2c8-7e51cb083566",
@@ -612,6 +604,14 @@
                 "id": "3907c06c-515f-4d06-9726-ae0e67181602",
                 "resourcePath": "scripts\\strip_string\\strip_string.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "db28d92a-df49-4bc7-8da8-5ee722007053",
+            "Value": {
+                "id": "759683e3-d2f4-4e2b-8ea4-3cdda6ce1b60",
+                "resourcePath": "objects\\objAsteroid\\objAsteroid.yy",
+                "resourceType": "GMObject"
             }
         },
         {

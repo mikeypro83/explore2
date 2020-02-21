@@ -38,7 +38,7 @@ draw_set_font(smFont1);
 draw_set_color(c_white);
 
 nstr = global.oPlayer.oTarget != noone ? string(global.oPlayer.oTarget.Name) : "N/A";
-dstr = global.oPlayer.oTarget != noone ? string(global.oPlayer.oTarget.damage) : "N/A";
+dstr = global.oPlayer.oTarget != noone ? string(global.oPlayer.oTarget.Damage) : "N/A";
 
 //draw_text_rows(1,1,4,"[TARGET]",
 //					 "  Type: " + nstr,

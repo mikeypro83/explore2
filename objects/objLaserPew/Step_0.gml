@@ -32,7 +32,7 @@ if(_inst != noone)
 	if(distance_between_points(self.x,self.y,_inst.x,_inst.y) < _inst.primitive_size)
 	{
 		instance_create_layer(self.x,self.y,"Instances",objAsteroidPow);
-		_inst.damage += self.laser_power;		
+		_inst.Damage += self.laser_power;		
 		instance_destroy(self);
 		return;
 	}

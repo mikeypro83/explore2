@@ -2,7 +2,7 @@
 // You can write your code in this editor
 image_angle+=rotation_rate;
 
-if(damage>=100)
+if(Damage>=100)
 {
 	// TEST $$$$$$$$$$$$$$$$$$$$
 	instance_create_layer(self.x-4,self.y-4,"Instances",objOreBit);	
