@@ -7,3 +7,4 @@ image_alpha = 1.0;
 _r=255;
 _g=255;
 _b=0;
+depth=global.GUIDepth;

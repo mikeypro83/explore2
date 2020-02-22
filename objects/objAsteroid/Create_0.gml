@@ -89,7 +89,7 @@
 	_cdark = make_color_rgb(32,32,32);
 
 	draw_set_alpha(1);
-	draw_circle_color(_x,_y,_hsize+(_hsize/2),image_blend,_cdark,false);
+	draw_circle_color(_x,_y,_hsize+(_hsize/2),image_blend,c_gray,false);
 
 	draw_set_alpha(0.5);
 

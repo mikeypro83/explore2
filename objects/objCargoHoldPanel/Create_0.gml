@@ -6,4 +6,5 @@ self.y = global.cargohold_y;
 depth = global.GUIDepth;
 visible = false;
 CargoHold = noone;
+Size = 256;
 

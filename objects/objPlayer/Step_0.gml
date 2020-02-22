@@ -5,7 +5,7 @@
 // TESTING/DEBUGGING CRAP
 /////////////////////////////////////////
 
-if(global.oTestButton.MouseLRelease)
+if(global.oQuitButton.MouseLRelease)
 	game_end();
 
 /////////////////////////////////////////
