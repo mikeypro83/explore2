@@ -14,6 +14,7 @@
 	visible = true;
 	depth = global.GUIDepth;
 	Text = "";	
+	HiText = "";
 	MouseOver=false;
 	MouseLDown=false;
 	MouseLRelease=false;

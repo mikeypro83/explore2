@@ -12,6 +12,7 @@ global.oCargoHoldPanel = instance_create_layer(0,0,"Instances",objCargoHoldPanel
 
 global.oQuitButton = instance_create_layer(786,612,"Instances",objTextButton);
 global.oQuitButton.Text = "`CQUIT";
+global.oQuitButton.HiText = "`EQUIT";
 global.oQuitButton.x = window_get_width() - 256;
 global.oQuitButton.y = 1;
 

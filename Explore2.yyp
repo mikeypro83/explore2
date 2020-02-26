@@ -638,14 +638,6 @@
                 "resourceType": "GMMacOptions"
             }
         },
-        {
-            "Key": "ffea38d1-8f2f-46cd-8e75-84647fbd5a55",
-            "Value": {
-                "id": "c1be12c1-5fa4-4659-aa49-9b9514ab9c9c",
-                "resourcePath": "scripts\\draw_texts_array\\draw_texts_array.yy",
-                "resourceType": "GMScript"
-            }
-        }
     ],
     "script_order": [
         "9885a330-6e5c-4b93-b87c-b9d1164b713b",

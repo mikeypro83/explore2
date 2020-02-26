@@ -30,12 +30,20 @@
 	
 	_f = draw_get_font();
 	draw_set_font(Font);
-	draw_set_color(c_white);	// default font color as backup	
-	if(MouseLDown)
+	draw_set_color(c_white);	// default font color as backup
+	if(MouseOver)
 	{
-		cdrawstrs(_x+(Size/2)-(str_plen/2),_y+1, "`8"+strip_string(Text));
+		cdrawstrs(_x+(Size/2)-(str_plen/2),_y+1, "`0"+strip_string(HiText));
+		cdrawstrs(_ty+_x+(Size/2)-(str_plen/2),_ty+_y+1, HiText);
 	}
-	cdrawstrs(_ty+_x+(Size/2)-(str_plen/2),_ty+_y+1, Text);
+	else if(MouseLDown)
+	{
+		cdrawstrs(_x+(Size/2)-(str_plen/2),_y+1, "`0"+strip_string(Text));
+		cdrawstrs(_ty+_x+(Size/2)-(str_plen/2),_ty+_y+1, Text);
+	}
+	else
+		cdrawstrs(_ty+_x+(Size/2)-(str_plen/2),_ty+_y+1, Text);
+	
 	
 	draw_set_font(_f);
 	draw_set_color(_olcol);
