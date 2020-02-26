@@ -351,6 +351,14 @@
             }
         },
         {
+            "Key": "6bb2c99d-b39d-4aea-98ca-001f27c21486",
+            "Value": {
+                "id": "d70cb5e7-3902-44ea-8611-2608e475eead",
+                "resourcePath": "views\\6bb2c99d-b39d-4aea-98ca-001f27c21486.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "720db057-4401-47bc-b41c-f0a8d06c2bf5",
             "Value": {
                 "id": "812ca591-d3c8-4c74-b10e-cd684e1d94e3",
@@ -483,6 +491,14 @@
             "Value": {
                 "id": "f20fc985-70f3-45d1-892d-ce6adbf7dc36",
                 "resourcePath": "scripts\\add_to_cargohold\\add_to_cargohold.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "aae71327-fed3-4eb7-b786-ecf24c3fa3f7",
+            "Value": {
+                "id": "39dbbc86-cbfa-4ed5-8746-b8d8bc4848c6",
+                "resourcePath": "scripts\\CheckForTopMouseOver\\CheckForTopMouseOver.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -637,7 +653,7 @@
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
             }
-        },
+        }
     ],
     "script_order": [
         "9885a330-6e5c-4b93-b87c-b9d1164b713b",
@@ -660,7 +676,8 @@
         "d0e08af9-7c2b-467b-a925-0da2a894c5ff",
         "d09fa83d-98b0-4eeb-bc8a-eaa1af62296f",
         "5757e537-dd9a-4a99-a722-79a50b4d6325",
-        "c60266a7-f0fa-4b0e-bc3d-ad700eda13f9"
+        "c60266a7-f0fa-4b0e-bc3d-ad700eda13f9",
+        "aae71327-fed3-4eb7-b786-ecf24c3fa3f7"
     ],
     "tutorial": ""
 }

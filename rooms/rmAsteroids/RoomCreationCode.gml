@@ -10,6 +10,11 @@ global.oCargoHoldPanel = instance_create_layer(0,0,"Instances",objCargoHoldPanel
 //global.oTestPanel = instance_create_layer(512,612,"Instances",objPanel);
 //global.oTestPanel.Size = 128;
 
+/*
+	This isn't how you would normally do it, normally you would create an object derived
+	from the objTextButton that sets it's text and position in create (possibly updating it in step)
+	then create THAT object.
+*/
 global.oQuitButton = instance_create_layer(786,612,"Instances",objTextButton);
 global.oQuitButton.Text = "`CQUIT";
 global.oQuitButton.HiText = "`EQUIT";

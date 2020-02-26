@@ -193,6 +193,9 @@ global.TextButtonFont1 = smFont1;
 
 global.iTabSelectedAsteroid = 0; // TODO: CHANGE -- This is used for tabbing through Asteroids..
 
+
+global.oMouseOverObj = noone;		// when an object
+
 ///////////////////////////////
 //
 ///////////////////////////////

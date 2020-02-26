@@ -10,7 +10,9 @@
         "48ed7975-277d-4114-a498-b1fb7fb7036a",
         "1c0967f7-4e8e-4c77-9c70-9aa3387c0427",
         "5757e537-dd9a-4a99-a722-79a50b4d6325",
-        "c60266a7-f0fa-4b0e-bc3d-ad700eda13f9"
+        "c60266a7-f0fa-4b0e-bc3d-ad700eda13f9",
+        "aae71327-fed3-4eb7-b786-ecf24c3fa3f7",
+        "6bb2c99d-b39d-4aea-98ca-001f27c21486"
     ],
     "filterType": "GMScript",
     "folderName": "New",

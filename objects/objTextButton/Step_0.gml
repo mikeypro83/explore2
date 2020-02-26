@@ -3,9 +3,11 @@
 {
 	_camx = camera_get_view_x(view_camera[view_current]);
 	_camy = camera_get_view_y(view_camera[view_current]);
-	if( point_in_rectangle(mouse_x,mouse_y,self.x+_camx,self.y+_camy,self.x+_camx+Size,self.y+_camy+get_fonth(Font)) )
-	{
-		MouseOver=true;	
+	MouseOver = point_in_rectangle(mouse_x,mouse_y,self.x+_camx,self.y+_camy,self.x+_camx+Size,self.y+_camy+get_fonth(Font));
+	CheckForTopMouseOver(); // This will negate MouseOver if another obj is on top that has MouseOver
+		
+	if(MouseOver)
+	{	
 	
 		if(mouse_check_button_pressed(mb_left))
 			MouseLDown = true;

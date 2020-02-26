@@ -88,26 +88,28 @@ direction = image_angle + 90;
 /////////////////////////////////////////
 
 _inst = instance_nearest(self.x,self.y, objAsteroid);
+
 if(_inst != noone)
 {
-		if (distance_between_points(self.x,self.y,_inst.x,_inst.y) < 
-			(self.primitive_size+4) + _inst.primitive_size)
-		{			
-			// Not the most accurate, but it does the job and I came up
-			// with everything myself, so there!
-			// NOTE: It wont take into account any of the scaling
-			while(distance_between_points(self.x,self.y,_inst.x,_inst.y) < 
-				(self.primitive_size+4) + _inst.primitive_size)
-			{
-				// take a scaled down "distance" to move the
-				// player out of the collision a little each loop.
-				self.x -= (_inst.x - self.x) * 0.1;
-				self.y -= (_inst.y - self.y) * 0.1;
-			}
+		//sprite_
+		//if (distance_between_points(self.x,self.y,_inst.x,_inst.y) < 
+		//	(self.primitive_size+4) + _inst.primitive_size)
+		//{			
+		//	// Not the most accurate, but it does the job and I came up
+		//	// with everything myself, so there!
+		//	// NOTE: It wont take into account any of the scaling
+		//	while(distance_between_points(self.x,self.y,_inst.x,_inst.y) < 
+		//		(self.primitive_size+4) + _inst.primitive_size)
+		//	{
+		//		// take a scaled down "distance" to move the
+		//		// player out of the collision a little each loop.
+		//		self.x -= (_inst.x - self.x) * 0.1;
+		//		self.y -= (_inst.y - self.y) * 0.1;
+		//	}
 
-			self.speed = 0; //-self.speed;
-			//self.direction = -self.direction;
-		}
+		//	self.speed = 0; //-self.speed;
+		//	//self.direction = -self.direction;
+		//}
 }
 
 //////////////////////////////////////////

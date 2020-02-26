@@ -4,7 +4,9 @@
 	
 	// for GUI-like elements, we offset our position by the camera's view position in order
 	// to use display pixel vectors.
-	m1 = matrix_build(self.x+camera_get_view_x(view_camera[0]), self.y+camera_get_view_y(view_camera[0]), 0, 0, 0, 0, 1, 1, 1);
+	_mx = self.x+camera_get_view_x(view_camera[camera_get_active()]);
+	_my = self.y+camera_get_view_y(view_camera[camera_get_active()]);
+	m1 = matrix_build(_mx, _my, 0, 0, 0, 0, 1, 1, 1);
 	// get an identity matrix for later.
 	mid = matrix_build_identity();
 	// set our world matrix so everything is draw at this position.
@@ -15,12 +17,17 @@
 	_y = 0;		
 	_olcol = draw_get_color();	
 	
-	// MAIN PANEL RECTANGLE
+	
+	// MAIN PANEL RECTANGLE	
 	draw_set_color(BGColor);
 	draw_rectangle(_x,_y,_x+Size,_y+Size,false);
 
 	// HEADING RECTANGLE
-	draw_set_color(TitleBGColor);
+	if (point_in_rectangle(mouse_x,mouse_y,_mx+_x,_my+_y,_mx+_x+Size,_my+_y+Size)==true)
+		draw_set_color(TitleBGHiColor);
+	else
+		draw_set_color(TitleBGColor);
+		
 	draw_rectangle(_x+2,_y+1,_x+Size-2,get_fonth(),false);
 
 	// OUTLINE RECTANGLE
