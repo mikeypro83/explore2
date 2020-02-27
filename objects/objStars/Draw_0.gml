@@ -2,7 +2,7 @@
 // You can write your code in this editor
 {
 
-	draw_save_alpha();
+	draw_save_state();
 
 	for(i = 0; i < star_count; ++i)
 	{
@@ -51,5 +51,5 @@
 		draw_point_color(camx+ _x, camy+_y, star_carray[i]);	
 	}
 	
-	draw_restore_alpha();
+	draw_restore_state();
 }

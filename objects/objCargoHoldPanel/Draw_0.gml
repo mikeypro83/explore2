@@ -13,9 +13,8 @@ _dsize = Size;
 _hdsize = _dsize / 2;
 _hdsize = _dsize / 2;
 _dcol = image_blend;
-_olcol = draw_get_color();
 
-draw_save_alpha();
+draw_save_state();
 draw_set_alpha(image_alpha);
 
 
@@ -36,6 +35,5 @@ else
 	draw_text(64,64,"( NO CARGO HOLD )");
 }
 					
-draw_set_color(_olcol);
-draw_restore_alpha();
+draw_restore_state();
 matrix_set(matrix_world,mid);

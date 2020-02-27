@@ -306,7 +306,7 @@
             "Key": "5757e537-dd9a-4a99-a722-79a50b4d6325",
             "Value": {
                 "id": "d5846892-a042-44d7-ab68-7ab2f7ad77fb",
-                "resourcePath": "scripts\\draw_save_alpha\\draw_save_alpha.yy",
+                "resourcePath": "scripts\\draw_save_state\\draw_save_state.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -347,14 +347,6 @@
             "Value": {
                 "id": "169133b0-5e32-4285-a1de-54a26049ce29",
                 "resourcePath": "views\\686e03cd-0a9f-45af-9f16-da6c26f3fb2a.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "6bb2c99d-b39d-4aea-98ca-001f27c21486",
-            "Value": {
-                "id": "d70cb5e7-3902-44ea-8611-2608e475eead",
-                "resourcePath": "views\\6bb2c99d-b39d-4aea-98ca-001f27c21486.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -546,7 +538,7 @@
             "Key": "c60266a7-f0fa-4b0e-bc3d-ad700eda13f9",
             "Value": {
                 "id": "794f6e04-174b-4e4d-913e-c86b1280ee2b",
-                "resourcePath": "scripts\\draw_restore_alpha\\draw_restore_alpha.yy",
+                "resourcePath": "scripts\\draw_restore_state\\draw_restore_state.yy",
                 "resourceType": "GMScript"
             }
         },

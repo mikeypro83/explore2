@@ -1,6 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// @function CheckForTopMouseOver()
-/// @description CheckForTopMouseOver
+/// @description Let's an object that uses the MouseOver variable determine wether or not
+///	it is the top-most object and assigns global.oMouseOverObj accordingly, if neccessary.
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // ADDITIONAL INFO FOR USE:
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,7 +37,5 @@
 	if(global.oMouseOverObj!=noone)
 		if(global.oMouseOverObj.MouseOver==false)
 			global.oMouseOverObj=noone;
-		
-	//if(global.oMouseOverObj==noone&&self.MouseOver)
-	//	global.oMouseOverObj=self;
+
 }

@@ -1,8 +1,8 @@
 {
-    "id": "c60266a7-f0fa-4b0e-bc3d-ad700eda13f9",
+    "id": "5757e537-dd9a-4a99-a722-79a50b4d6325",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "draw_restore_alpha",
+    "name": "draw_save_state",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -7,8 +7,7 @@ mid = matrix_build_identity();
 matrix_set(matrix_world,m1);
 
 // Default visual property values
-_olcol = draw_get_color();
-_olal = draw_get_alpha();
+draw_save_state();
 
 draw_set_color(c_white);
 
@@ -20,6 +19,5 @@ cdrawstrs(2,2,"`6[`FTARGET`6]",
 					 "`fDamage`6: `e"  +dstr,
 					 "`f  tgt#`6: `e" + string(global.iTabSelectedAsteroid));
 
-draw_set_color(_olcol);
-draw_set_alpha(_olal);
+draw_restore_state();
 matrix_set(matrix_world,mid);

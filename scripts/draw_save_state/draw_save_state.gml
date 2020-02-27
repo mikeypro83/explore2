@@ -1,9 +1,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
-/// @function draw_restore_alpha()
-/// @description Restores the saved alpha from a previous draw_save_alpha call.
+/// @function draw_save_state(savecolor, savealpha)
+/// @description Saves the alpha and color values for drawing based on the parameters
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // ADDITIONAL INFO FOR USE:
-//	creates a global._saved_alpha variable is one does not already exist.
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // author: michael scott stuart (mikeypro83)
 // email: michaelscottstuart@yahoo.com
@@ -14,7 +13,16 @@
 //			(see commercial.txt)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 {
-	if(variable_global_exists("_saved_alpha")==false) global._saved_alpha=1.0;
-	draw_set_alpha(global._saved_alpha);
+	if(argument_count==0)
+	{
+		global._saved_alpha = draw_get_alpha();
+		global._saved_color = draw_get_color();
+	}
+	if(argument_count>0)
+		if(argument[0])
+			global._saved_alpha = draw_get_alpha();
+	if(argument_count>1)
+		if(argument[1])
+			global._saved_color = draw_get_color();
 	return 0;
 }
