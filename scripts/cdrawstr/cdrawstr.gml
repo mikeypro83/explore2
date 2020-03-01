@@ -44,7 +44,7 @@
 		{
 			switch(_ch)
 			{
-				case "`":
+				case "`":				
 					coding = true;
 					_dtci++;
 					continue;
@@ -73,6 +73,7 @@
 				case "F": draw_set_color(c_white); break;
 				case "[": black_outline = true; break;
 				case "]": black_outline = false; break;
+				case "N": _yy += get_fonth(draw_get_font()); _xx = argument[0]; global.cdrawstr_incd_y=true; break;
 			}
 			coding = false;
 			_dtci++;

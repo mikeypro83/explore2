@@ -575,14 +575,6 @@
             }
         },
         {
-            "Key": "cdb714c6-77e0-41c7-a488-8dfe77516298",
-            "Value": {
-                "id": "dd86ce88-aae6-4baa-93da-e4f57693ebb0",
-                "resourcePath": "rooms\\rmPlanet\\rmPlanet.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "d0162abe-af8b-4e8c-9ef8-b00b97fefa76",
             "Value": {
                 "id": "d4358b5a-32d7-4927-a1e3-1100540deb0b",
@@ -607,11 +599,27 @@
             }
         },
         {
+            "Key": "db0f5143-b3e1-401d-ac1d-24a8506879d6",
+            "Value": {
+                "id": "988b6875-a6a0-43a6-9a05-3388967f78f2",
+                "resourcePath": "views\\db0f5143-b3e1-401d-ac1d-24a8506879d6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "db28d92a-df49-4bc7-8da8-5ee722007053",
             "Value": {
                 "id": "759683e3-d2f4-4e2b-8ea4-3cdda6ce1b60",
                 "resourcePath": "objects\\objAsteroid\\objAsteroid.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dcd197ac-f98f-42c9-8446-e37e4279dfa5",
+            "Value": {
+                "id": "ef44c06d-3e87-4a43-94ec-6c82cd8a2cd8",
+                "resourcePath": "views\\dcd197ac-f98f-42c9-8446-e37e4279dfa5.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -657,19 +665,19 @@
         "4af2e7d8-30af-4be4-813d-7fefd6b3a9fa",
         "978a8ef5-be71-4b60-ba63-38fa5a97506a",
         "c70865dd-7d12-4892-a373-bb017c65fb84",
-        "232a55d1-9a74-4517-b7a4-a4ba6ea546ab",
         "359ad427-11be-4f4b-9fd1-788f640d4a18",
         "642ed3f8-7c49-4f84-b92a-c164b9fcfa0a",
         "a91384f3-f8ed-438b-8303-329c2a167c00",
         "3c80ab0b-f0fa-48b2-b14d-c7d49b73fe67",
         "afbc0680-c61f-4e80-9014-f169b6120f7e",
+        "232a55d1-9a74-4517-b7a4-a4ba6ea546ab",
+        "aae71327-fed3-4eb7-b786-ecf24c3fa3f7",
+        "5757e537-dd9a-4a99-a722-79a50b4d6325",
+        "c60266a7-f0fa-4b0e-bc3d-ad700eda13f9",
         "3640ba4c-f986-4c1a-9de7-0f5661d1f028",
         "2ed01de0-26d8-40c1-a96b-b17256359189",
         "d0e08af9-7c2b-467b-a925-0da2a894c5ff",
-        "d09fa83d-98b0-4eeb-bc8a-eaa1af62296f",
-        "5757e537-dd9a-4a99-a722-79a50b4d6325",
-        "c60266a7-f0fa-4b0e-bc3d-ad700eda13f9",
-        "aae71327-fed3-4eb7-b786-ecf24c3fa3f7"
+        "d09fa83d-98b0-4eeb-bc8a-eaa1af62296f"
     ],
     "tutorial": ""
 }

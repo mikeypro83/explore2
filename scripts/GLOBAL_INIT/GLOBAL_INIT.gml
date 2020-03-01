@@ -17,13 +17,18 @@
 			-- ??
 			-- Object Images are generated in Create Events then converted to sprites!!
 			   that way we stick to the procedurally generated design, BUT also get the flexibility
-			   of sprites. And we get a (major) performance boost for doing it!
+			   of sprites. And we get a (major) performance boost for using sprites.
 			   
 			-- DESIGN SOLAR SYSTEMS OR GO ORIGINAL DESIGN PLAN ?????? MAKE UP YOUR MIND!!
 			
-	TODO:
+			-- scripts that create objects should start with spawn_    
+					
 			
-			-- create resize script and resize code for all GUI elements. (for after fullscreen toggle)
+	TODO:
+			-- objPanel needs to check previous mouse state to see if mouse freshly clicked on panel
+				or if the mouse button has been down and is "dragging" a panel around.
+				
+			-- ALL GUI ELEMENTS NEED TO RE-CALCULATE THEIR POSITIONS ON FULLSCREEN/WINDOW TOGGLE!
 			
 			-- create GUI auto-position option (toggles) or user-set (click on title and drag)
 			   -- make it so you can save the GUI positions if user-set
@@ -42,8 +47,7 @@
 					-- cargo_type_tostr			(rename? clean up..)
 					-- set_shader_blacken		(rename? clean up..)
 					-- create_float_text		(rename? clean up..)
-					-- select_next_asteroid		(this is getting revamped to select_next_object i believe)
-					-- create_obj_properties	(rename? clean up..)			
+					-- select_next_asteroid		(this is getting revamped to select_next_object i believe)					
 
 */
 
@@ -70,6 +74,10 @@ global.keyScrollUp = vk_up;
 global.keyScrollDown = vk_down;
 global.keyToggleHelpScreen = vk_f1;
 global.keyToggleCargoPanel = ord("C");
+
+global.MLBIsDown = false;
+global.MMBIsDown = false;
+global.RMBIsDown = false;
 
 ///////////////////////////////
 
@@ -104,6 +112,7 @@ global.cargohold_y = 256;
 ///////////////////////////////
 
 global.cdrawstrs_height = 0;	
+global.cdrawstr_incd_y = false;
 
 ///////////////////////////////
 // TEXT THINGS HERE

@@ -5,9 +5,47 @@
 	
 	Quantity = 0;	// This could be count or normally, Tonnage
 	CargoType = irandom_range(0, cargo_type.CargoCount-1); // TODO: BETTER
-		
-	image_blend = image_blend == 0 ? c_gray : image_blend;		// if set after creating the instance..
-	image_alpha = image_alpha == 0.0 ? 1.0 : image_alpha;		// if set after creating the instance..
+	
+	switch(CargoType)
+	{
+		case cargo_type.Silica:				// 80%
+			image_blend = c_teal;
+			break;		
+		case cargo_type.Iron:				// 60%
+			image_blend = c_gray;
+			break;		
+		case cargo_type.Copper:				// 50%
+			image_blend = c_orange;
+			break;		
+		case cargo_type.Silver:				// 30%			
+			image_blend = c_silver;
+			break;		
+		case cargo_type.Gold:			// 20%
+			image_blend = c_green;
+			break;		
+		case cargo_type.Nickel:				// 30%
+			image_blend = c_aqua;
+			break;		
+		case cargo_type.Uranium:			// 10%			
+			image_blend = c_ltgray;
+			break;		
+		case cargo_type.Plutonium:			// 15%			
+			image_blend = c_blue;
+			break;		
+		case cargo_type.Magnesium:			// 20%
+			image_blend = c_olive;
+			break;
+		case cargo_type.Platinum:			// 5%
+			image_blend = c_dkgray;
+			break;
+		case cargo_type.FrozenH20:			
+			image_blend = c_navy;
+			break;
+	}
+	
+	draw_save_state(true,true);
+	draw_set_color(image_blend);
+	draw_set_alpha(1.0);
 	
 	speed = random_range(-0.075,0.075);
 	direction = random_range(0,359);
@@ -34,11 +72,9 @@
 	_surf = surface_create(_surfw,_surfh);
 	surface_set_target(_surf);
 
-	_ocol = draw_get_color();
-	_oal = draw_get_alpha();
 	_al = 1.0;
-	_hsize = primitive_size/2;
-
+	_hsize = primitive_size/2;	
+	
 	for(i = 0; i < shape_count; ++i)
 	{	
 		if(i>1)draw_set_alpha(0.5);
@@ -48,8 +84,7 @@
 		matrix_set(matrix_world,matrix_build_identity());
 	}
 
-	draw_set_color(_ocol);
-	draw_set_alpha(_oal);
+	draw_restore_state();
 	surface_reset_target();
 	self.sprite_index = sprite_create_from_surface(_surf,0,0,_surfw,_surfh,false,false,_surfw/2,_surfh/2);
 }

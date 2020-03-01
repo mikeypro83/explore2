@@ -9,8 +9,23 @@ if(global.oQuitButton.MouseLRelease)
 	game_end();
 
 /////////////////////////////////////////
-// INPUT CONTORLS
+// Global Input Updates
 /////////////////////////////////////////
+
+global.LMBIsDown = mouse_check_button(mb_left);
+global.MMBIsDown = mouse_check_button(mb_middle);
+global.RMBIsDown = mouse_check_button(mb_right);
+global.LMBReleased = mouse_check_button_released(mb_left);
+global.MMBReleased = mouse_check_button_released(mb_middle);
+global.RMBReleased = mouse_check_button_released(mb_right);
+
+// TODO:  /\   See how these assignments do, if they don't act properly
+//		  ||  then figure out how to get them to behave.
+
+/////////////////////////////////////////
+// INPUT CONTROLS
+/////////////////////////////////////////
+
 
 if(keyboard_check_released(global.keyToggleCargoPanel))
 {
@@ -58,7 +73,11 @@ if(keyboard_check(global.keyDeccelerate))
 
 if(keyboard_check_released(global.keyUse))
 {
-	las = instance_create_layer(self.x,self.y-4,"Instances",objLaserPew);
+	las = instance_create_layer(self.x,self.y,"Instances",objLaserPew);
+	_x = lengthdir_x(self.primitive_size, las.direction);
+	_y = lengthdir_y(self.primitive_size, las.direction);
+	las.x = self.x;//+_x - (primitive_size/2);
+	las.y = self.y;//+_y - (primitive_size/2);
 	las.oOwner = self;
 	las.image_angle = self.image_angle;
 	las.direction = self.direction;
@@ -87,10 +106,10 @@ direction = image_angle + 90;
 // Collisions w / global.Asteroids
 /////////////////////////////////////////
 
-_inst = instance_nearest(self.x,self.y, objAsteroid);
+//_inst = instance_nearest(self.x,self.y, objAsteroid);
 
-if(_inst != noone)
-{
+//if(_inst != noone)
+//{
 		//sprite_
 		//if (distance_between_points(self.x,self.y,_inst.x,_inst.y) < 
 		//	(self.primitive_size+4) + _inst.primitive_size)
@@ -110,35 +129,14 @@ if(_inst != noone)
 		//	self.speed = 0; //-self.speed;
 		//	//self.direction = -self.direction;
 		//}
-}
+//}
 
 //////////////////////////////////////////
 // Player Collision w/objOreBits
 //////////////////////////////////////////
 
-_inst = instance_nearest(self.x,self.y, objOreBit);
-if(_inst != noone)
-{
-		if (distance_between_points(self.x,self.y,_inst.x,_inst.y) < 
-			(self.primitive_size+4) + _inst.primitive_size)
-		{			
-			if(CargoHold!=noone)
-			{
-				if (CargoHold.CargoFree > 0)
-				{
-					_remain123 = add_to_cargohold(CargoHold, _inst.CargoType, _inst.Quantity);					
-					create_floatup_text(self.x,self.y-8,string(_inst.Quantity-_remain123),"Instances");
-					if(_remain123>0)
-					{
-						_inst.Quantity = _remain123;
-						_inst.image_alpha -= 0.75;
-						create_floatup_text(self.x,self.y-8,"CARGO FULL","Instances");				
-					}
-					else
-					{
-						instance_destroy(_inst);
-					}
-				}
-			}				
-		}
-}
+//_inst = instance_nearest(self.x,self.y, objOreBit);
+//if(_inst != noone)
+//{
+
+//}

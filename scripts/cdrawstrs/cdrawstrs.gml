@@ -31,15 +31,27 @@
 		{
 			_t = argument[2];
 			cdrawstr(argument[0],argument[1],_t[i]);
-			argument[1] += _h;
+			if(global.cdrawstr_incd_y) 
+			{
+				global.cdrawstr_incd_y=false;
+				argument[1] += _h*2;
+			}
+			else
+				argument[1] += _h;
 		}
 	}
 	else // _usearray = false
 	{
 		for(i=2;i<argument_count;++i)
 		{
-			cdrawstr(argument[0],argument[1],argument[i]);
-			argument[1] += _h;
+			cdrawstr(argument[0],argument[1],argument[i]);			
+			if(global.cdrawstr_incd_y) 
+			{
+				global.cdrawstr_incd_y=false;
+				argument[1] += _h*2;				
+			}
+			else
+				argument[1] += _h;			
 		}		
 	}
 	

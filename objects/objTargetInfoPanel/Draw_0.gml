@@ -13,7 +13,7 @@ draw_set_color(c_white);
 
 nstr = global.oPlayer.oTarget != noone ? string(global.oPlayer.oTarget.Name) : "N/A";
 dstr = global.oPlayer.oTarget != noone ? string(global.oPlayer.oTarget.Damage) : "N/A";
-				 
+
 cdrawstrs(2,2,"`6[`FTARGET`6]",
 					 "`f  Type`6: `e" + nstr,
 					 "`fDamage`6: `e"  +dstr,

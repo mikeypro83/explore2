@@ -23,7 +23,7 @@
 		return;
 	}
 	if (self.MouseOver&&global.oMouseOverObj!=self)
-	{
+	{			
 		if(global.oMouseOverObj.depth > self.depth)
 		{
 			global.oMouseOverObj.MouseOver=false;

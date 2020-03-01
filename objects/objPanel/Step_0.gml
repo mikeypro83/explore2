@@ -12,4 +12,7 @@
 		self.x = mouse_x-(Size/2)-_camx;
 		self.y = mouse_y-(Size/2)-_camy;
 	}
+	
+	if(MouseOver==false&&global.oMouseOverObj==self)
+		global.oMouseOverObj=noone;
 

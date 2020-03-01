@@ -12,8 +12,7 @@
         "eb8da15d-3922-4806-9953-8e73965a3448",
         "4af2e7d8-30af-4be4-813d-7fefd6b3a9fa",
         "978a8ef5-be71-4b60-ba63-38fa5a97506a",
-        "c70865dd-7d12-4892-a373-bb017c65fb84",
-        "232a55d1-9a74-4517-b7a4-a4ba6ea546ab"
+        "c70865dd-7d12-4892-a373-bb017c65fb84"
     ],
     "filterType": "GMScript",
     "folderName": "Old",
