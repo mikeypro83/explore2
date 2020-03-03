@@ -2,11 +2,10 @@
 // You can write your code in this editor
 planet_image_w = 512;
 planet_image_h = 512;
-planet_size = 128.0;		// diameter
+planet_size = 512.0;		// diameter
 
-pid = global.pid++;
-
-depth = -100;
+visible = true;
+depth = 0;
 
 _rot = 0;
 _crot = 0;

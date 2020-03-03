@@ -14,19 +14,22 @@
 	DESIGN CEMENT:
 	
 			-- NO SCROLLING TEXT/ITEM BOXES. DO WITHOUT. NOT WORTH THE TIME AT THIS POINT.
-			-- ??
 			-- Object Images are generated in Create Events then converted to sprites!!
 			   that way we stick to the procedurally generated design, BUT also get the flexibility
 			   of sprites. And we get a (major) performance boost for using sprites.
 			   
-			-- DESIGN SOLAR SYSTEMS OR GO ORIGINAL DESIGN PLAN ?????? MAKE UP YOUR MIND!!
+			-- DESIGN SOLAR SYSTEMS ???? Already decided asteroid belts around planets.
 			
 			-- scripts that create objects should start with spawn_    
+			
+			-- have planet generate basic sprite then use shader to move texture and other things
+				adam and I discussed extra shaders for weather effects / and ground effects for 
+				celestial bodies (objPlanet)
 					
 			
 	TODO:
 				
-			-- ALL GUI ELEMENTS NEED TO RE-CALCULATE THEIR POSITIONS ON FULLSCREEN/WINDOW TOGGLE!
+			-- ALL GUI ELEMENTS NEED TO RE-CALCULATE THEIR POSITIONS BASED ON SCREEN SIZE WHEN FULLSCREEN/WINDOW IS TOGGLED!
 			
 			-- create GUI auto-position option (toggles) or user-set (click on title and drag)
 			   -- make it so you can save the GUI positions if user-set
@@ -87,17 +90,15 @@ global.MMBIsReleased = false;
 global.RMBIsReleased = false;
 
 ///////////////////////////////
+/// GUI OPTIONS
+///////////////////////////////
 
 global.IsFullscreen = false;
 global.ShowDebugInfo = false;		// TODO: Switch to a few different types, one shows everything, one shows collisions only
-global.ShowHelpScreen = true;
-global.ShowCargoPanel = false;
-
-global.pid = 0;		// planet id numbers. temporary for saving surfaces. TODO: REMOVE THIS 
-
+global.ShowHelpScreen = true;		//     
+global.ShowCargoPanel = false;		//  Are these neccessary since they are now objPanel's and have visible attribute????
 
 global.GUIDepth = -20;
-
 
 ///////////////////////////////
 // GUI ELEMENT POSITIONS
@@ -199,24 +200,15 @@ global.obj_type_str = ["None","Player","Asteroid","Ship","Space Station", ""];
 
 global.TextButtonFont1 = smFont1;
 
-//global.oMinimap = instance_create_layer(0,0,"Instances", objMinimap);
-//global.oPlayer = instance_create_layer(0,0,"Instances", objPlayer);
-//global.oStars = instance_create_layer(0,0,"Instances", objStars);
-//global.oTargetInfoPanel = instance_create_layer(0,0,"Instances", objTargetInfoPanel);
-//global.oSystemInfoPanel = instance_create_layer(0,0,"Instances", objSystemInfoPanel);
-//global.oHelpScreen = instance_create_layer(0,0,"Instances", objHelpScreen);
-//global.oCargoHoldPanel = instance_create_layer(0,0,"Instances",objCargoHoldPanel);
-
 global.iTabSelectedAsteroid = 0; // TODO: CHANGE -- This is used for tabbing through Asteroids..
 
-
-global.oMouseOverObj = noone;		// when an object
+global.oMouseOverObj = noone;		// when an object has the MouseOver it, used soley by objPanel
 
 ///////////////////////////////
-//
+// HARDCODED GPU STUFF
 ///////////////////////////////
 
-gpu_set_tex_filter(false);
+gpu_set_tex_filter(false);			// no filtering, we want the raw pixel look! _ALWAYS_
 
 ///////////////////////////////
 // Set the first room

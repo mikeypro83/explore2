@@ -64,8 +64,7 @@ if(keyboard_check_released(global.keyToggleFullscreen))
 		camera_set_view_size(view_camera[0],view_wport[0],view_hport[0]);
 		surface_resize(application_surface,view_wport[0],view_hport[0]);
 	}
-	
-	global.oStars.Resize = true;
+		
 }
 
 if(keyboard_check_released(global.keyToggleDebugInfo))

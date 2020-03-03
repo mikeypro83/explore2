@@ -24,7 +24,7 @@ _u=0;
 _v=0;
 _r=self.planet_size-16;	// radius
 _angle = 0;
-_point_count = 32;
+_point_count = 64;
 _deg = 360 / _point_count;
 draw_point(_x,_y);
 _ty = texture_get_texel_height(_tex);
@@ -50,7 +50,7 @@ _u=0;
 _v=0;
 _r=self.planet_size-16;	// radius
 _angle = 0;
-_point_count = 32;
+_point_count = 64;
 _deg = 360 / _point_count;
 draw_point(_x,_y);
 _ty = texture_get_texel_height(_tex);
@@ -67,7 +67,7 @@ for(i = 0; i < _point_count+1; i++)
 draw_primitive_end();
 gpu_set_texrepeat(false);
 draw_set_alpha(0.75);
-draw_circle_color(-0.5,-0.5,_r+2,c_white,c_black,false);
+draw_circle_color(-0.5,-0.5,_r+(_r/10),c_white,c_black,false);
 
 matrix_set(matrix_world,mid);
 

@@ -6,8 +6,10 @@ global.Asteroids = array_create(global.asteroid_count,noone);
 
 for(i = 0; i < global.asteroid_count; ++i)
 {
-	nx = irandom(4096);
-	ny = irandom(4096);
+	ndeg = random_range(0,359);
+	ndist = random_range(4096, (room_width/2)); 
+	nx = (room_width/2) + lengthdir_x(ndist,ndeg);
+	ny = (room_height/2) + lengthdir_y(ndist,ndeg);
 	timeoutcount = 0;
 	for(ii = 0; ii < global.asteroid_count; ++ii)
 	{		
@@ -17,8 +19,10 @@ for(i = 0; i < global.asteroid_count; ++i)
 					(global.Asteroids[ii].primitive_size*2) ||
 					(nx<128||nx>room_width-128||ny<128||ny>room_height-128) )
 			{
-				nx = irandom(4096);
-				ny = irandom(4096);
+				ndeg = random_range(0,359);
+				ndist = random_range(0,room_width - 256);
+				nx = lengthdir_x(ndist,ndeg);
+				ny = lengthdir_y(ndist,ndeg);
 				ii = 0;
 				timeoutcount++;
 			}

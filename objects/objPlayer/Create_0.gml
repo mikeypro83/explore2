@@ -3,9 +3,6 @@
 {	
 	assign_obj_props("Player");
 
-	x = window_get_width() / 2;
-	y = window_get_height() / 2;
-
 	image_xscale = 1.0;
 	image_yscale = 1.0;
 	image_blend = c_gray;
