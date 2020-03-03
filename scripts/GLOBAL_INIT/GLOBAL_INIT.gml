@@ -25,8 +25,6 @@
 					
 			
 	TODO:
-			-- objPanel needs to check previous mouse state to see if mouse freshly clicked on panel
-				or if the mouse button has been down and is "dragging" a panel around.
 				
 			-- ALL GUI ELEMENTS NEED TO RE-CALCULATE THEIR POSITIONS ON FULLSCREEN/WINDOW TOGGLE!
 			
@@ -75,9 +73,18 @@ global.keyScrollDown = vk_down;
 global.keyToggleHelpScreen = vk_f1;
 global.keyToggleCargoPanel = ord("C");
 
-global.MLBIsDown = false;
+global.LMBIsDown = false;
+global.LMBIsHeld = false;
+global.LMBWasReleased = false;
 global.MMBIsDown = false;
+global.MMBIsHeld = false;
+global.MMBWasReleased = false;
 global.RMBIsDown = false;
+global.RMBIsHeld = false;
+global.RMBWasReleased = false;
+global.LMBIsReleased = false;
+global.MMBIsReleased = false;
+global.RMBIsReleased = false;
 
 ///////////////////////////////
 
@@ -111,8 +118,8 @@ global.cargohold_y = 256;
 // MY TRICK KNEE
 ///////////////////////////////
 
-global.cdrawstrs_height = 0;	
-global.cdrawstr_incd_y = false;
+global.cdrawstrs_height = 0;				// for auto-text-height calculations. You can set this to a fixed number or 0 for auto-calc.
+global.cdrawstr_incd_y = false;				// for `n newline code to work properly we have to track the y coordinate when it is used. don't change the value.
 
 ///////////////////////////////
 // TEXT THINGS HERE

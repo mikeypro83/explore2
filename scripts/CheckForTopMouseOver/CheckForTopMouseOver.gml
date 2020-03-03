@@ -24,7 +24,7 @@
 	}
 	if (self.MouseOver&&global.oMouseOverObj!=self)
 	{			
-		if(global.oMouseOverObj.depth > self.depth)
+		if(global.oMouseOverObj.depth > self.depth && !global.LMBIsHeld)
 		{
 			global.oMouseOverObj.MouseOver=false;
 			global.oMouseOverObj = self;

@@ -1,8 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-_olcol = draw_get_color();
-_olal = draw_get_alpha();
+draw_save_state();
 
 _x = self.x + camera_get_view_x(view_camera[0]);
 _y = self.y + camera_get_view_y(view_camera[0]);
@@ -71,5 +70,5 @@ draw_set_alpha(0.75);
 draw_circle_color(-0.5,-0.5,_r+2,c_white,c_black,false);
 
 matrix_set(matrix_world,mid);
-draw_set_color(_olcol);
-draw_set_alpha(_olal);
+
+draw_restore_state();

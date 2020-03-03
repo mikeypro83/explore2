@@ -8,9 +8,6 @@ matrix_set(matrix_world,m1);
 
 draw_save_state();
 
-// Default visual property values
-
-//shader_set(smooth_font);
 draw_set_font(smFont1);
 draw_set_color(c_white);
 cdrawstrs(2,2,"[SYSTEMS]", 

@@ -12,12 +12,21 @@ if(global.oQuitButton.MouseLRelease)
 // Global Input Updates
 /////////////////////////////////////////
 
+global.LMBIsHeld = global.LMBIsDown;
+global.MMBIsHeld = global.MMBIsDown;
+global.RMBIsHeld = global.RMBIsDown;
+global.LMBWasReleased = global.LMBIsReleased;
+global.MMBWasReleased = global.MMBIsReleased;
+global.RMBWasReleased = global.RMBIsReleased;
 global.LMBIsDown = mouse_check_button(mb_left);
 global.MMBIsDown = mouse_check_button(mb_middle);
 global.RMBIsDown = mouse_check_button(mb_right);
-global.LMBReleased = mouse_check_button_released(mb_left);
-global.MMBReleased = mouse_check_button_released(mb_middle);
-global.RMBReleased = mouse_check_button_released(mb_right);
+global.LMBIsReleased = mouse_check_button_released(mb_left);
+global.MMBIsReleased = mouse_check_button_released(mb_middle);
+global.RMBIsReleased = mouse_check_button_released(mb_right);
+global.LMBIsHeld = global.LMBIsHeld && global.LMBIsDown && (global.LMBWasReleased==false);
+global.MMBIsHeld = global.MMBIsHeld && global.MMBIsDown && (global.MMBWasReleased==false);
+global.RMBIsHeld = global.RMBIsHeld && global.RMBIsDown && (global.RMBWasReleased==false);
 
 // TODO:  /\   See how these assignments do, if they don't act properly
 //		  ||  then figure out how to get them to behave.

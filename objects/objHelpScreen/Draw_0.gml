@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited();
-draw_self();
 
 m1 = matrix_build(self.x+camera_get_view_x(view_camera[0]), self.y+camera_get_view_y(view_camera[0]), 0, 0, 0, 0, 1, 1, 1);
 mid = matrix_build_identity();

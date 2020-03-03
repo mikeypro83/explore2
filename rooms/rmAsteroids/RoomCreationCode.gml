@@ -5,6 +5,7 @@ global.oTargetInfoPanel = instance_create_layer(0,0,"Instances", objTargetInfoPa
 global.oSystemInfoPanel = instance_create_layer(0,0,"Instances", objSystemInfoPanel);
 global.oHelpScreen = instance_create_layer(0,0,"Instances", objHelpScreen);
 global.oCargoHoldPanel = instance_create_layer(0,0,"Instances",objCargoHoldPanel);
+global.oPlanet = instance_create_layer(room_width/2,room_height/2,"Instances",objPlanet);
 
 
 //global.oTestPanel = instance_create_layer(512,612,"Instances",objPanel);
