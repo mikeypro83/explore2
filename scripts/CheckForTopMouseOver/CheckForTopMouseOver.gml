@@ -20,6 +20,7 @@
 	if(global.oMouseOverObj==noone&&self.MouseOver)
 	{
 		global.oMouseOverObj=self;
+		global.oMouseOverObj.depth = global.GUIDepth-1;
 		return;
 	}
 	if (self.MouseOver&&global.oMouseOverObj!=self)
@@ -28,14 +29,19 @@
 		{
 			global.oMouseOverObj.MouseOver=false;
 			global.oMouseOverObj = self;
+			global.oMouseOverObj.depth = global.GUIDepth-1;
 		} else
 		{
 			self.MouseOver = false;
+			self.depth = global.GUIDepth;
 		}
 	}
 	
 	if(global.oMouseOverObj!=noone)
 		if(global.oMouseOverObj.MouseOver==false)
+		{
+			global.oMouseOverObj.depth = global.GUIDepth;
 			global.oMouseOverObj=noone;
+		}
 
 }

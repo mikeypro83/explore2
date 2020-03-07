@@ -9,10 +9,10 @@ matrix_set(matrix_world,m1);
 draw_save_state();
 draw_set_color(c_white);
 
-cdrawstrs(8,8,"`[`E------------------------------------------------------`]`n"+	
+cdrawstrs(8,get_fonth()+2,"`[`E------------------------------------------------------`]`n"+	
 					"`[`FEXPLORE2`] `7-- `FA 2D space shooter/mining game",
 						"`7programming, design, everything: `bmichael scott stuart",
-						"`E------------------------------------------------------",
+						"`[`E------------------------------------------------------`]",
 						"`F F1 `6-- this help screen",
 						"`FF11 `6-- fullscreen toggle",
 						"`FF10 `6-- debug info toggle",

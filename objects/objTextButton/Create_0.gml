@@ -2,6 +2,7 @@
 // You can write your code in this editor
 {	
 	Size = 0;
+	Padd = 16;
 	TitleBGColor = make_color_rgb(64,64,64);
 	BGColor = make_color_rgb(32,32,32);
 	BGHiColor = make_color_rgb(64,64,64);

@@ -639,6 +639,14 @@
             }
         },
         {
+            "Key": "f00f8645-cffa-48ac-b698-c1efd3e63c67",
+            "Value": {
+                "id": "acd20185-63d2-4629-9eb6-fb1dc42a92de",
+                "resourcePath": "scripts\\ivar_exists\\ivar_exists.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f35bc730-42ea-4704-916f-eb90997ed44b",
             "Value": {
                 "id": "7ce4adce-5c3e-4b43-bdda-198060ed2dc7",
@@ -671,6 +679,7 @@
         "3c80ab0b-f0fa-48b2-b14d-c7d49b73fe67",
         "afbc0680-c61f-4e80-9014-f169b6120f7e",
         "232a55d1-9a74-4517-b7a4-a4ba6ea546ab",
+        "f00f8645-cffa-48ac-b698-c1efd3e63c67",
         "aae71327-fed3-4eb7-b786-ecf24c3fa3f7",
         "5757e537-dd9a-4a99-a722-79a50b4d6325",
         "c60266a7-f0fa-4b0e-bc3d-ad700eda13f9",

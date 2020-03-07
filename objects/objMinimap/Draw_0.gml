@@ -66,6 +66,11 @@ for (i = 0; i < array_length_1d(lels); i++;)
 							draw_point(_x,_y);
 						}
 						break;
+					case objPlanet:
+							draw_set_color(c_blue);
+							draw_circle(_x,_y, (inst.planet_size/room_width)*minimap_size,false);
+							draw_set_color(c_green);
+							draw_circle(_x,_y, (inst.planet_size/room_width)*minimap_size,true);
 					default:
 						// do nothing
 							/*draw_set_color(c_yellow); 

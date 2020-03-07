@@ -10,7 +10,7 @@
 	_tx=0;
 	_ty=0;
 	str_plen = string_width(strip_string(self.Text));
-	Size = Size < 1 ? 8 + str_plen + 8 : Size;
+	Size = Size < 1 ? Padd + str_plen + Padd : Size;
 
 	// OUTLINE RECTANGLE
 	if(MouseOver==false) draw_set_color(BGColor) else draw_set_color(BGHiColor);

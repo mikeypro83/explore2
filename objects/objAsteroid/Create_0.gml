@@ -10,6 +10,7 @@
 	
 	// TODO: assign_asteroid_props script ?? or is it assign_object_props script ??? DESIGN IT!
 	
+	// TODO: Generate non-circular asteroids
 
 	Name = "Asteroid";		// ?? Type name??
 	Damage = 0;				// was damage
@@ -26,7 +27,8 @@
 	image_yscale = 1.0;
 	image_blend = choose(c_gray, c_ltgray, c_aqua);
 	rotation_rate = random_range(-1.0,1.0);
-	primitive_size = random_range(10,40);
+	primitive_size = random_range(10,40);			// WARNING: THIS GETS USED BY objLaserPew 
+													// FOR COLLISION DETECTION!!!
 
 	// This code creates extra shapes to make asteroids look unique and "interesting"
 	_halfsize = primitive_size / 2;

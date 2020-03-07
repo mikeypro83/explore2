@@ -11,5 +11,6 @@
 	Color4 = make_color_rgb(64,64,128);
 	Font = smFont1;
 	MouseOver = false;
+	depth = global.GUIDepth;
 	
 }

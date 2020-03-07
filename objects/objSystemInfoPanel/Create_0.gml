@@ -4,4 +4,3 @@ event_inherited();
 self.x = global.systeminfo_x;
 self.y = global.systeminfo_y;
 self.Size = 160;
-depth = global.GUIDepth-2;
