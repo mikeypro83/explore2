@@ -38,7 +38,7 @@ global.RMBIsHeld = global.RMBIsHeld && global.RMBIsDown && (global.RMBWasRelease
 
 if(keyboard_check_released(global.keyToggleCargoPanel))
 {
-	global.oCargoHoldPanel.CargoHold = self.CargoHold;
+	global.oCargoHoldPanel.oCargoHold = self.oCargoHold;
 	global.ShowCargoPanel = !global.ShowCargoPanel;
 	global.oCargoHoldPanel.visible = global.ShowCargoPanel;
 }
@@ -63,8 +63,7 @@ if(keyboard_check_released(global.keyToggleFullscreen))
 	{
 		camera_set_view_size(view_camera[0],view_wport[0],view_hport[0]);
 		surface_resize(application_surface,view_wport[0],view_hport[0]);
-	}
-		
+	}		
 }
 
 if(keyboard_check_released(global.keyToggleDebugInfo))

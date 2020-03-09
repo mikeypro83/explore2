@@ -1,4 +1,4 @@
-global.oMinimap = instance_create_layer(0,0,"Instances", objMinimap);
+Panel = instance_create_layer(0,0,"Instances", objMinimapPanel);
 global.oPlayer = instance_create_layer((room_width/2)-2048,(room_height/2)-2048,"Instances", objPlayer);
 global.oStars = instance_create_layer(0,0,"Instances", objStars);
 global.oTargetInfoPanel = instance_create_layer(0,0,"Instances", objTargetInfoPanel);

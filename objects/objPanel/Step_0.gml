@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+{
 	_camx = camera_get_view_x(view_camera[camera_get_active()]);
 	_camy = camera_get_view_y(view_camera[camera_get_active()]);
 		
@@ -15,4 +15,4 @@
 	
 	if(MouseOver==false&&global.oMouseOverObj==self)
 		global.oMouseOverObj=noone;
-
+}

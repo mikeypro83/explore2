@@ -23,10 +23,10 @@
 	if(_cn > _ch.CargoFree)
 	{
 		_leftover = _cn - _ch.CargoFree;
-		_ch.CargoHold[_ct] += _ch.CargoFree;
+		_ch.Cargo[_ct] += _ch.CargoFree;
 		return _leftover;
 	}	
-	_ch.CargoHold[_ct] += _cn;
+	_ch.Cargo[_ct] += _cn;
 	update_cargohold(_ch);
 	return 0;
 }

@@ -1,8 +1,8 @@
 /// @description Display Info
 // You can write your code in this editor
 
-_x = self.x - camera_get_view_x(view_camera[0]);
-_y = self.y - camera_get_view_y(view_camera[0]);
+_x = self.x - get_activecam_viewx();
+_y = self.y - get_activecam_viewy();
 
 if(global.oPlayer.oTarget!=noone)
 	cdrawstrs(_x,_y,"itabselected: " + string(global.iTabSelectedAsteroid),
@@ -13,8 +13,6 @@ if(global.oPlayer.oTarget!=noone)
 if(!global.ShowDebugInfo) 
 	return;
 
-_x = self.x - camera_get_view_x(view_camera[0]);
-_y = self.y - camera_get_view_y(view_camera[0]);
 _yy = _y;
 _yinc = 16;
 

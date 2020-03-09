@@ -1,7 +1,7 @@
 /// @description Setup Default Properties
 // You can write your code in this editor
 {	
-	assign_obj_props("Player");
+	assign_obj_props(self.id, "Player");
 
 	image_xscale = 1.0;
 	image_yscale = 1.0;
@@ -15,7 +15,7 @@
 
 	self.oTarget = noone;
 
-	CargoHold = instance_create_layer(x,y,"Hidden",objCargoHold);
+	oCargoHold = instance_create_layer(x,y,"Hidden",objCargoHold);
 
 	// CREATE IMAGE & SPRITE
 

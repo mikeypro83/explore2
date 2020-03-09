@@ -18,15 +18,15 @@ draw_save_state();
 draw_set_alpha(image_alpha);
 
 
-if(CargoHold!=noone && instance_exists(CargoHold))
+if(oCargoHold!=noone && instance_exists(oCargoHold))
 {
-	cdrawstr(2,2,"`[`6[ `FC`7ARGO `FH`7OLD `6]`]          (`7"+ string(CargoHold.CargoUsed) + "`8/`F"+ string(CargoHold.MaxCargo)+"`6)");
+	cdrawstr(2,2,"`[`6[ `FC`7ARGO `FH`7OLD `6]`]          (`7"+ string(oCargoHold.CargoUsed) + "`8/`F"+ string(oCargoHold.MaxCargo)+"`6)");
 	cdrawstrs(8,get_fonth()+2,global.cargo_type_str);
 	
 	for(i = 0; i < cargo_type.CargoCount; ++i)
 	{	
 		draw_text(128,get_fonth()+2 + i*(get_fonth()), 
-			string(CargoHold.CargoHold[i]));
+			string(oCargoHold.Cargo[i]));
 	}
 }
 else

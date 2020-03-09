@@ -4,52 +4,26 @@
 
 	draw_save_state();
 
-	for(i = 0; i < star_count; ++i)
-	{
-		//switch(star_carray[i])
-		//{
-		//	case c_ltgray:
-		//		_x -= (global.oPlayer.x - star_xarray[i]) * 0.6;
-		//		_y -= (global.oPlayer.y - star_yarray[i]) * 0.6;
-		//	break;		
-		//	case c_gray:
-		//		_x -= (global.oPlayer.x - star_xarray[i]) * 0.4;
-		//		_y -= (global.oPlayer.y - star_yarray[i]) * 0.4;
-		//	break;		
-		//	case c_dkgray:
-		//		_x -= (global.oPlayer.x - star_xarray[i]) * 0.1;
-		//		_y -= (global.oPlayer.y - star_yarray[i]) * 0.1;			
-		//	break;
-		//	default:
-		//		_x -= (global.oPlayer.x - star_xarray[i]) * 0.02;
-		//		_y -= (global.oPlayer.y - star_yarray[i]) * 0.02;			
-		//		break;
-		//}
-		ncamx = camera_get_view_x(view_camera[camera_get_active()]);
-		ncamy = camera_get_view_y(view_camera[camera_get_active()]);
-		ncamw = camera_get_view_width(view_camera[camera_get_active()]);
-		ncamh = camera_get_view_height(view_camera[camera_get_active()]);
+	_vx = get_activecam_viewx();
+	_vy = get_activecam_viewy();
+	_vw = get_activecam_vieww();
+	_vh = get_activecam_viewh();
+
+	_tex = sprite_get_texture(space1,0);	
+	gpu_set_tex_repeat(true);
+
+	draw_set_alpha(0.5);
+	draw_primitive_begin_texture(pr_trianglestrip,_tex);
+
+	_u = 0 + global.oPlayer.x / room_width;		// x component of texture pixel we want
+	_v = 0 + global.oPlayer.y / room_height;	// y component of texture pixel we want
+	_s = 3.0;	// in this case textures are 0.0 to 1.0, _s = _size of texture.
+	draw_vertex_texture(_vx,_vy,			_u,		_v);
+	draw_vertex_texture(_vx+_vw,_vy,		_u+_s,	_v);
+	draw_vertex_texture(_vx,_vy+_vh,		_u,		_v+_s);
+	draw_vertex_texture(_vx+_vw,_vy+_vh,	_u+_s,	_u+_s);
 		
-		camx = ncamx;
-		camy = ncamy;
-		camw = ncamw;
-		camh = ncamh;
-	
-		_x = star_xarray[i];
-		_y = star_yarray[i];
-		//if(_x>camx+camw) _x = camx;s
-		//if(_x<camx) _x = camx+camw;
-		//if(_y>camy+camh) _y = camy;
-		//if(_y<camy) _y = camy+camh;	
-		//star_xarray[i]=_x;
-		//star_yarray[i]=_y;
-	
-		//if(i==0)
-		//show_debug_message("star 0 = " + string(_x)+", " + string(_y));
-		
-		draw_set_alpha(0.6);
-		draw_point_color(camx+ _x, camy+_y, star_carray[i]);	
-	}
-	
-	draw_restore_state();
+	draw_primitive_end();
+
+	draw_restore_state();	
 }

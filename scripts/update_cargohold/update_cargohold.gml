@@ -14,7 +14,7 @@
 	_ch.CargoUsed = 0;	
 	for(i = 0; i < cargo_type.CargoCount; ++i)
 	{
-		_ch.CargoUsed += _ch.CargoHold[i];	// Add number of cargo_type.(i)		
+		_ch.CargoUsed += _ch.Cargo[i];	// Add number of cargo_type.(i)		
 	}
 	_ch.CargoFree = _ch.MaxCargo - _ch.CargoUsed;
 	return true;

@@ -1,32 +1,47 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
-/// @description assign_obj_props
-/// @param {string} Name
-/// @param {string} Description [string or array-of-strings]
-/// @param {global.align_type} Alignment 
+/// @function assign_obj_props(instance-id, {prop1}, ...)
+/// @description assigns/creates the properties (variables) for an instance.
+/// @param {instance-id} Instance
 /////////////////////////////////////////////////////////////////////////////////////////////////
-// INFO:
-//		Use this script to create and assign values for object properties that are to be used
-//	(AND EXPECTED TO EXIST!!) for objects in the game. 
-//		--- Call at the beginning of the object's Create Event, or after it's creation.
+// ADDITIONAL INFO FOR USE:
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // author: michael scott stuart (mikeypro83)
 // email: michaelscottstuart@yahoo.com
+// license: modified freeware, open-source: Original attribution of work is required for all
+//			distributions of derived and original versions of this work. Failure to provide a
+//			visible and apparent notice of original attribution defaults any derived work to a 
+//			commercial license and therefore applicable fees will apply for licensing said work. 
+//			(see commercial.txt)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 {	
-	Name = "Obj" + string(object_index);
-	Type = obj_type.None;
-	Align = align_type.Nuetral;
-	HasCargo = false;
-	DropCargoOnDeath = false;
-	oCargoHold = noone;	//instance_create_layer(0,0,"Hidden",objCargoHold);
-	TakesDamage = false;
-	Damage = 0;
-	Desc = "No description.";
-
 	if(argument_count>0)
-		self.Name = argument[0];
-	if(argument_count>1)
-		self.Desc = argument[1];
-	if(argument_count>2)
-		self.Align = argument[2];
+		_inst = argument[0];
+	else
+		show_error("assign_obj_props(instance, prop1, ...): argument[0] is required.",true);
+	if(instance_exists(_inst)==false)
+		show_error("assign_obj_Props(instance, prop1, ...): argument[0] instance does not exist.", true);
+	_argc=1;
+	if(argument_count>_argc)
+		_inst.Name = argument[_argc]; _argc++;
+	if(argument_count>_argc)
+		_inst.Desc = argument[_argc]; _argc++;
+	if(argument_count>_argc)
+		_inst.Type = argument[_argc]; _argc++;
+	if(argument_count>_argc)
+		_inst.Align = argument[_argc]; _argc++;
+	if(argument_count>_argc)
+		_inst.oCargoHold = argument[_argc]; _argc++;
+	if(argument_count>_argc)
+		_inst.DropCargoOnDeath = argument[_argc]; _argc++;
+	if(argument_count>_argc)
+		_inst.TakesDamage = argument[_argc]; _argc++;
+	if(argument_count>_argc)
+		_inst.Damage = argument[_argc]; _argc++;
+	if(argument_count>_argc)
+		_inst.LaserLevel = argument[_argc]; _argc++;
+	if(argument_count>_argc)
+		_inst.MaxSpeed = argument[_argc]; _argc++;
+	if(argument_count>_argc)
+		_inst.Actor = argument[_argc]; _argc++;
+	return _inst;
 }
