@@ -9,6 +9,8 @@ if(global.oPlayer.oTarget!=noone)
 		"oPlayer.oTarget: " + string(object_get_name(global.oPlayer.oTarget.object_index)) );
 
 
+cdrawstr(_x,_y+12, string(global.oMouseOverObj));
+
 
 if(!global.ShowDebugInfo) 
 	return;

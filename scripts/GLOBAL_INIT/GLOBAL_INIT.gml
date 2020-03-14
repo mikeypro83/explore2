@@ -122,6 +122,17 @@ global.cargohold_y = 256;
 global.cdrawstrs_height = 0;				// for auto-text-height calculations. You can set this to a fixed number or 0 for auto-calc.
 global.cdrawstr_incd_y = false;				// for `n newline code to work properly we have to track the y coordinate when it is used. don't change the value.
 
+
+global.debugpanels_y = 256;
+
+global.oFirstPanel = noone;					// TESTING A TRICK: Panels with depth-sort themselves by being a basic linked-list themselves.
+
+// TODO : REMOVE THESE  oPrevMouseOverPanel
+
+
+global.oPrevMouseOverPanel = noone;
+global.oMouseOverObj = noone;				// when an object has the MouseOver it, used soley by objPanel	// TODO: REMOVE
+
 ///////////////////////////////
 // TEXT THINGS HERE
 ///////////////////////////////
@@ -202,7 +213,12 @@ global.TextButtonFont1 = smFont1;
 
 global.iTabSelectedAsteroid = 0; // TODO: CHANGE -- This is used for tabbing through Asteroids..
 
-global.oMouseOverObj = noone;		// when an object has the MouseOver it, used soley by objPanel
+///////////////////////////////
+// SET SOME STUFF
+///////////////////////////////
+
+draw_set_font(smFont1);
+
 
 ///////////////////////////////
 // HARDCODED GPU STUFF
