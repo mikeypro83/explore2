@@ -125,13 +125,8 @@ global.cdrawstr_incd_y = false;				// for `n newline code to work properly we ha
 
 global.debugpanels_y = 256;
 
-global.oFirstPanel = noone;					// TESTING A TRICK: Panels with depth-sort themselves by being a basic linked-list themselves.
+global.oFirstPanel = noone;					// First Panel in the Linked-List Style of depth-sorting I'm using for objPanel's.
 
-// TODO : REMOVE THESE  oPrevMouseOverPanel
-
-
-global.oPrevMouseOverPanel = noone;
-global.oMouseOverObj = noone;				// when an object has the MouseOver it, used soley by objPanel	// TODO: REMOVE
 
 ///////////////////////////////
 // TEXT THINGS HERE

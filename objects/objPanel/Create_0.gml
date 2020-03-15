@@ -2,7 +2,8 @@
 // You can write your code in this editor
 {
 	Name = "None";
-	Size = 0;
+	Size = 0;	
+	YSize = 0;
 	TitleBGColor = make_color_rgb(64,64,64);
 	TitleBGHiColor = make_color_rgb(76,76,96);
 	BGColor = make_color_rgb(32,32,32);

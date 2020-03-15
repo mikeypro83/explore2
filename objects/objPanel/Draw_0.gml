@@ -20,10 +20,10 @@
 	
 	// MAIN PANEL RECTANGLE	
 	draw_set_color(BGColor);
-	draw_rectangle(_x,_y,_x+Size,_y+Size,false);
+	draw_rectangle(_x,_y,_x+Size,_y+YSize,false);
 
 	// HEADING RECTANGLE
-	if (point_in_rectangle(mouse_x,mouse_y,_mx+_x,_my+_y,_mx+_x+Size,_my+_y+Size)==true)
+	if (point_in_rectangle(mouse_x,mouse_y,_mx+_x,_my+_y,_mx+_x+Size,_my+_y+YSize)==true)
 		draw_set_color(TitleBGHiColor);
 	else
 		draw_set_color(TitleBGColor);
@@ -31,7 +31,7 @@
 	draw_rectangle(_x+2,_y+1,_x+Size-2,get_fonth(),false);
 
 	// OUTLINE RECTANGLE
-	draw_rectangle_color(_x,_y,_x+Size,_y+Size,Color1,Color2,Color3,Color4,true);	
+	draw_rectangle_color(_x,_y,_x+Size,_y+YSize,Color1,Color2,Color3,Color4,true);	
 	draw_set_color(_olcol);	
 	matrix_set(matrix_world,mid);
 }

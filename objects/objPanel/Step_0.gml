@@ -13,11 +13,14 @@
 	_mx = mouse_x;
 	_my = mouse_y;
 	
-	// The mouse may move faster than the Panel does, so if we are dragging we will
-	// enforce the mouseover even tho the mouse may technically be somewhere else,
-	// as long as the user is holding LMB down we don't want to let go of the panel...
-	// Otherwise we do a normal mouse-over check.
-	MouseOver = (MouseOver && global.LMBIsHeld) || point_in_rectangle(_mx,_my, x+_camx, y+_camy, _camx+x+Size, _camy+y+Size);
+	// Set YSize to Size if it is 0 or less because that signifies that it is not 
+	// being used to specifiy size for this particular instance.
+	YSize = ( YSize > 0 ) ? YSize : Size;
+	
+	// The mouse moves faster than we update the panel's position, so we have to
+	// assume that while this instance has MouseOver and the LMB is being held doing
+	// the user is dragging the panel even if the mouse_x and mouse_y are in a "future" position.
+	MouseOver = (MouseOver && global.LMBIsHeld) || point_in_rectangle(_mx,_my, x+_camx, y+_camy, _camx+x+Size, _camy+y+YSize);
 		
 	if ( MouseOver )
 	{
@@ -83,7 +86,7 @@
 			else 
 			{
 				self.x = mouse_x - _camx - (Size/2);
-				self.y = mouse_y - _camy - (Size/2);
+				self.y = mouse_y - _camy - (YSize/2);
 			}			
 			
 		} // if ( global.LMBIsDown )		

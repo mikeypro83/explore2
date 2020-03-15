@@ -19,4 +19,6 @@
 	MouseOver=false;
 	MouseLDown=false;
 	MouseLRelease=false;
+	
+	event_inherited();
 }

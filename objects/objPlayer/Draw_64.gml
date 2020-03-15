@@ -1,4 +1,4 @@
-/// @description Display Info
+ /// @description Display Info
 // You can write your code in this editor
 
 _x = self.x - get_activecam_viewx();
@@ -9,7 +9,7 @@ if(global.oPlayer.oTarget!=noone)
 		"oPlayer.oTarget: " + string(object_get_name(global.oPlayer.oTarget.object_index)) );
 
 
-cdrawstr(_x,_y+12, string(global.oMouseOverObj));
+//cdrawstr(_x,_y+12, string(global.oMouseOverObj));
 
 
 if(!global.ShowDebugInfo) 
