@@ -11,14 +11,10 @@
 	Color2 = make_color_rgb(128,128,128);
 	Color3 = make_color_rgb(96,96,96);
 	Color4 = make_color_rgb(64,64,128);
-	Font = global.TextButtonFont1;
-	visible = true;
-	depth = global.GUIDepth;
-	Text = "";	
+	Font = global.TextButtonFont1;			// TODO: Change to final font.
+	visible = true;	
+	Text = "";
 	HiText = "";
-	MouseOver=false;
-	MouseLDown=false;
-	MouseLRelease=false;
-	
+	MouseOver=false;	
 	event_inherited();
 }

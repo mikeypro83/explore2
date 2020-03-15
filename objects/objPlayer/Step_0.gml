@@ -5,7 +5,7 @@
 // TESTING/DEBUGGING CRAP
 /////////////////////////////////////////
 
-if(global.oQuitButton.MouseLRelease)
+if(global.oQuitButton.MouseOver && global.LMBIsReleased)
 	game_end();
 
 /////////////////////////////////////////

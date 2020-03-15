@@ -43,9 +43,12 @@ if(_inst != noone)
 // VIEW BOUNDARY
 //////////////////////////////////////////
 
-xp = camera_get_view_x(view_camera[0]);
-yp = camera_get_view_y(view_camera[0]);
-xxp = xp+camera_get_view_width(view_camera[0]);
-yyp = yp+camera_get_view_height(view_camera[0]);
-if(  (self.x < xp || self.x > xxp) || (self.y < yp || self.y > yyp) )
+if ( is_outside_view(self, camera_get_active()) )
 	instance_destroy(self);
+
+//xp = camera_get_view_x(view_camera[0]);
+//yp = camera_get_view_y(view_camera[0]);
+//xxp = xp+camera_get_view_width(view_camera[0]);
+//yyp = yp+camera_get_view_height(view_camera[0]);
+//if(  (self.x < xp || self.x > xxp) || (self.y < yp || self.y > yyp) )
+//	instance_destroy(self);

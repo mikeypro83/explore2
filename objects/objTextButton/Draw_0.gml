@@ -3,7 +3,7 @@
 {
 	// Override normal panel drawing
 	//event_inherited();
-	m1 = matrix_build(self.x+camera_get_view_x(view_camera[0]), self.y+camera_get_view_y(view_camera[0]), 0, 0, 0, 0, 1, 1, 1);
+	m1 = matrix_build(self.x+get_activecam_viewx(), self.y+get_activecam_viewy(), 0, 0, 0, 0, 1, 1, 1);
 	mid = matrix_build_identity();
 	matrix_set(matrix_world,m1);
 	_olcol = draw_get_color();	

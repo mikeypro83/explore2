@@ -3,10 +3,7 @@
 //  -- Panel Depth Sorting & Mouse Over is Tested and Working 100%!!
 // 
 
-{	
-	if(visible==false)
-		return;
-		
+{			
 	_camx = get_activecam_viewx();
 	_camy = get_activecam_viewy();
 	
@@ -21,7 +18,15 @@
 	// assume that while this instance has MouseOver and the LMB is being held doing
 	// the user is dragging the panel even if the mouse_x and mouse_y are in a "future" position.
 	MouseOver = (MouseOver && global.LMBIsHeld) || point_in_rectangle(_mx,_my, x+_camx, y+_camy, _camx+x+Size, _camy+y+YSize);
-		
+	
+	// if the Panel can have it's visibility toggled on and off
+	// then when it is off force MouseOver to always be false,
+	// the mouse is not allowed to drag or click on a panel that
+	// is not visible.
+	//
+	if (visible==false)
+		MouseOver = false;
+	
 	if ( MouseOver )
 	{
 		if ( global.LMBIsDown )
@@ -91,6 +96,6 @@
 			
 		} // if ( global.LMBIsDown )		
 				
-	} // if ( MouseOver )
-
+	} // if ( MouseOver )	
+	
 }

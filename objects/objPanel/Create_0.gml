@@ -1,9 +1,12 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description A Linked-List Based GUI Panel Object. (Like a Window/Surface/View but less features)
+/// Any GUI-like elements wishing to work with other GUI-like elements will derive from this object.
 {
 	Name = "None";
 	Size = 0;	
-	YSize = 0;
+	YSize = 0;	// 0 or negative YSize value signifies that the Y component is the same as Size, which
+				// is the X component's value.
+	
+	Draggable = true;	// LMB drag will drag the panel with it.
 	TitleBGColor = make_color_rgb(64,64,64);
 	TitleBGHiColor = make_color_rgb(76,76,96);
 	BGColor = make_color_rgb(32,32,32);

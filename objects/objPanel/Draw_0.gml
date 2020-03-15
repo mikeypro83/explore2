@@ -4,8 +4,8 @@
 	
 	// for GUI-like elements, we offset our position by the camera's view position in order
 	// to use display pixel vectors.
-	_mx = self.x+camera_get_view_x(view_camera[camera_get_active()]);
-	_my = self.y+camera_get_view_y(view_camera[camera_get_active()]);
+	_mx = self.x + get_activecam_viewx();
+	_my = self.y + get_activecam_viewy();
 	m1 = matrix_build(_mx, _my, 0, 0, 0, 0, 1, 1, 1);
 	// get an identity matrix for later.
 	mid = matrix_build_identity();
@@ -14,8 +14,8 @@
 
 	// Default visual property values
 	_x = 0;
-	_y = 0;		
-	_olcol = draw_get_color();	
+	_y = 0;
+	_olcol = draw_get_color();
 	
 	
 	// MAIN PANEL RECTANGLE	
