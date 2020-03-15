@@ -4,9 +4,9 @@
 _x = self.x - get_activecam_viewx();
 _y = self.y - get_activecam_viewy();
 
-if(global.oPlayer.oTarget!=noone)
-	cdrawstrs(_x,_y,"itabselected: " + string(global.iTabSelectedAsteroid),
-		"oPlayer.oTarget: " + string(object_get_name(global.oPlayer.oTarget.object_index)) );
+//if(global.oPlayer.oTarget!=noone)
+//	cdrawstrs(_x,_y,"itabselected: " + string(global.iTabSelectedAsteroid),
+//	"oPlayer.oTarget: " + string(object_get_name(global.oPlayer.oTarget.object_index)) );
 
 
 //cdrawstr(_x,_y+12, string(global.oMouseOverObj));

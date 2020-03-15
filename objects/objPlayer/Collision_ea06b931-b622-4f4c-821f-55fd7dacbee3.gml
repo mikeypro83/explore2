@@ -3,7 +3,7 @@
 {
 	if(oCargoHold!=noone)
 	{
-		if (CargoHold.CargoFree > 0)
+		if (oCargoHold.CargoFree > 0)
 		{
 			_remain123 = add_to_cargohold(oCargoHold, other.CargoType, other.Quantity);					
 			create_floatup_text(self.x,self.y-8,string(other.Quantity-_remain123),"Instances");
