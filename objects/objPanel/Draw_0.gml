@@ -31,7 +31,10 @@
 	draw_rectangle(_x+2,_y+1,_x+Size-2,get_fonth(),false);
 
 	// OUTLINE RECTANGLE
-	draw_rectangle_color(_x,_y,_x+Size,_y+YSize,Color1,Color2,Color3,Color4,true);	
+	if(MouseOver && global.oFirstPanel==self && global.LMBIsHeld)
+		draw_rectangle_color(_x,_y,_x+Size,_y+YSize,Color4,Color4,Color4,Color4,true);	
+	else
+		draw_rectangle_color(_x,_y,_x+Size,_y+YSize,Color1,Color2,Color3,Color4,true);	
 	draw_set_color(_olcol);	
 	matrix_set(matrix_world,mid);
 }
