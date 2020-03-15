@@ -127,6 +127,9 @@ global.debugpanels_y = 256;
 
 global.oFirstPanel = noone;					// First Panel in the Linked-List Style of depth-sorting I'm using for objPanel's.
 
+global.WindowResized = false;
+global.PrevViewW = 0;
+global.PrevViewH = 0;
 
 ///////////////////////////////
 // TEXT THINGS HERE
@@ -224,6 +227,8 @@ gpu_set_tex_filter(false);			// no filtering, we want the raw pixel look! _ALWAY
 ///////////////////////////////
 // Set the first room
 ///////////////////////////////
+
+view_camera[0] = camera_get_active();
 
 room_goto_next();
 

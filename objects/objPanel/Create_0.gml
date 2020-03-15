@@ -17,8 +17,9 @@
 	Font = smFont1;
 	MouseOver = false;	
 	DebugY = global.debugpanels_y;
-	global.debugpanels_y += get_fonth();	
+	global.debugpanels_y -= get_fonth();	
 	depth = global.GUIDepth;
+	RelocateOnResize = false;	
 	
 	//
 	// PANEL SORTING METHOD CODE

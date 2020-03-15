@@ -7,4 +7,5 @@
 	x = global.minimap_x;
 	y = global.minimap_y;
 	depth = global.GUIDepth;
+	RelocateOnResize = true;
 }

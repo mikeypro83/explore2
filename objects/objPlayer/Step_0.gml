@@ -49,21 +49,31 @@ if(keyboard_check_released(global.keyToggleHelpScreen))
 	global.oHelpScreen.visible = global.ShowHelpScreen;
 }
 
+global.WindowResized = false;
+
 if(keyboard_check_released(global.keyToggleFullscreen))
 {	
+	global.PrevViewW = get_activecam_vieww();
+	global.PrevViewH = get_activecam_viewh();
 	global.IsFullscreen = !global.IsFullscreen;
 	window_set_fullscreen(global.IsFullscreen);		
 	
+	
 	if(global.IsFullscreen)
 	{
-		camera_set_view_size(view_camera[0],display_get_width(),display_get_height());
+		// FOR SOME REASON view_camera[0] IS NOT THE SAME AS camera_get_active() 
+		// BUT THEY BOTH, BY DEFAULT, AFFECT THE SCREEN. FUH. 
+		//
+		camera_set_view_size(view_camera[0], display_get_width(),display_get_height());
 		surface_resize(application_surface,display_get_width(),display_get_height());		
 	}
 	else
 	{
 		camera_set_view_size(view_camera[0],view_wport[0],view_hport[0]);
 		surface_resize(application_surface,view_wport[0],view_hport[0]);
-	}		
+	}	
+	
+	global.WindowResized = true;
 }
 
 if(keyboard_check_released(global.keyToggleDebugInfo))

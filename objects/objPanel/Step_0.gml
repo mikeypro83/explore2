@@ -14,6 +14,16 @@
 	// being used to specifiy size for this particular instance.
 	YSize = ( YSize > 0 ) ? YSize : Size;
 	
+	// If the view surface & window has been resized then
+	//
+	if (global.WindowResized && RelocateOnResize)
+	{
+		self.x = self.x + (self.x/get_activecam_vieww());
+		self.y = self.y + (self.y/get_activecam_viewh());
+		show_debug_message("Worked");
+		
+	}	
+	
 	// The mouse moves faster than we update the panel's position, so we have to
 	// assume that while this instance has MouseOver and the LMB is being held doing
 	// the user is dragging the panel even if the mouse_x and mouse_y are in a "future" position.
@@ -87,8 +97,8 @@
 					oself = oself.oNext;
 				}
 				  
-			} // Otherwise, oFirstPanel is SELF and the user is dragging this panel.
-			else 
+			} // Otherwise, oFirstPanel is SELF and the user is dragging this panel....
+			else if ( Draggable )
 			{
 				self.x = mouse_x - _camx - (Size/2);
 				self.y = mouse_y - _camy - (YSize/2);

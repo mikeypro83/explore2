@@ -1,6 +1,7 @@
 /// @description Create/Set Button Default Properties
 // You can write your code in this editor
 {	
+	event_inherited(); // branches execution to objPanel.Create first
 	Size = 0;
 	Padd = 16;
 	TitleBGColor = make_color_rgb(64,64,64);
@@ -16,5 +17,5 @@
 	Text = "";
 	HiText = "";
 	MouseOver=false;	
-	event_inherited();
+	Draggable=false;
 }
