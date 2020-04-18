@@ -11,21 +11,48 @@
 //			(see commercial.txt)
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /*
-	DESIGN CEMENT:
+	DESIGN OUTLINE-CEMENT:
 	
 			-- NO SCROLLING TEXT/ITEM BOXES. DO WITHOUT. NOT WORTH THE TIME AT THIS POINT.
 			-- Object Images are generated in Create Events then converted to sprites!!
 			   that way we stick to the procedurally generated design, BUT also get the flexibility
 			   of sprites. And we get a (major) performance boost for using sprites.
+			   -- NOTE: UNFORTUNATELY -- Some things cannot be done procedurally at all and
+			   then we are forced to use sprites. That is fine.. :)
 			   
-			-- DESIGN SOLAR SYSTEMS ???? Already decided asteroid belts around planets.
+			-- Scripts that create objects start with spawn_    
 			
-			-- scripts that create objects should start with spawn_    
-			
-			-- have planet generate basic sprite then use shader to move texture and other things
+			-- GENERAL IDEA NEEDS FLESHED-OUT: have planet generate basic sprite then use shader to move texture and other things
 				adam and I discussed extra shaders for weather effects / and ground effects for 
 				celestial bodies (objPlanet)
-					
+								
+			--- > PlanetView Room		-- Shows a planet with or without asteroids; shows Ships, Help Screen For the Room
+											show ships within solar system and what alignment they are dependent on the IFF detector installed.
+			--- > SolarSystemView Room  -- Shows scaled down view of all planets, the star and the asteroid belts that may or may not 
+											be around planets; show ships within range and if IFF detector is installed then what alignment they are.
+											jump info (if jumping to a planet), etc, Help Screen for the Room
+			--- > NavMapView Room		-- Shows scaled down view of all solar systems to jump to, jump info if jumping to a solar system,
+										-- Access to view cargo, Help Screen for the Room
+				
+			objIFFDectector:				
+				objScannerLow				-- scans objects in PlanetView and shows their position in minimap.
+				objScannerPrecise			-- scans objects in PlanetView, and SolarSystemView.
+				objIFFDectectorLow			-- scans objects in PlanetView with alignment and positions in minimap, 
+												shows objects in the SolarSystemView and shows their current planet location.										
+				objIFFDectectorPrecise		-- scans objects in PlanetView, SolarSystem view and shows their alignments and positions in both views.
+			objNavMapScanner				-- Shows objects (all solar systems and their detected ship counts in each) 
+			objNavMapIFFDetector			-- shows objects and their alignments in all solar systems along, organized by their alignment type:
+													ie: [       IFF Detector       ]
+														 Hostile : 2					// hostile ships that may or may not attack, of course ..
+																						// fighters most likely to fight and flee when severely damaged
+																						// merchants most likely to run but will flee with defensive fire																						
+														 Friend  : 1					// friendly ships, may help out in fight or may run away
+																						// fighters: same as hostile fighters but for friendlies.
+																						// merchants: same as hostile merchants but for friendlies.
+														 Nuetral : 6					// merchant ships, always run in a fight unless provoked by player or
+																						// a hostile/allied merchant, always flees to any fighter.
+														 Other   : 0					// ore & asteroids
+				
 			
 	TODO:
 				
@@ -75,6 +102,10 @@ global.keyScrollUp = vk_up;
 global.keyScrollDown = vk_down;
 global.keyToggleHelpScreen = vk_f1;
 global.keyToggleCargoPanel = ord("C");
+
+////////////////////////////////////////////
+/// MOUSE CONTROLS -- see script MouseInput
+////////////////////////////////////////////
 
 global.LMBIsDown = false;
 global.LMBIsHeld = false;

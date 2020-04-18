@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "0049a993-9e1d-44c4-8d73-c4099465a8d6",
+            "Value": {
+                "id": "4dede9e6-9fac-4ba3-90b4-92612297b819",
+                "resourcePath": "views\\0049a993-9e1d-44c4-8d73-c4099465a8d6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "00d063f2-8a7d-4910-b15e-803bf2cd04ab",
             "Value": {
                 "id": "72a6ecfe-7ac0-4b27-a82f-f867d94e5348",
@@ -87,6 +95,14 @@
             }
         },
         {
+            "Key": "18134f72-3eb8-4e1a-8f06-69f71ad8d2db",
+            "Value": {
+                "id": "531e72d7-4e69-4c82-9d54-176c78b35b61",
+                "resourcePath": "views\\18134f72-3eb8-4e1a-8f06-69f71ad8d2db.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "1af15ac5-423d-45ec-aaf0-259e04ff69d4",
             "Value": {
                 "id": "c0cf9504-4355-4122-95c4-f53dc8aacd5e",
@@ -108,6 +124,14 @@
                 "id": "e16499f5-b904-4791-a960-d93a40559996",
                 "resourcePath": "views\\1c0967f7-4e8e-4c77-9c70-9aa3387c0427.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "1ce562de-57d2-403d-956d-b316aa0d25d4",
+            "Value": {
+                "id": "d043c67d-5f65-4f37-b7f1-e1d1e65ddc67",
+                "resourcePath": "rooms\\rmNavMapView\\rmNavMapView.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -199,6 +223,14 @@
             }
         },
         {
+            "Key": "3b24fc6e-3684-4261-a9f7-2140a3584642",
+            "Value": {
+                "id": "a1d9ead2-e1d1-4efe-8b0d-79cf4f1df1e3",
+                "resourcePath": "objects\\objNavMapView\\objNavMapView.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3b361646-15df-4831-883c-eb1846508146",
             "Value": {
                 "id": "dc75bef9-1994-40bc-ad22-e96427628c1e",
@@ -276,6 +308,14 @@
                 "id": "78b769a0-7433-4c4e-a4de-52def85786ae",
                 "resourcePath": "objects\\objWeapon\\objWeapon.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "51c40584-a9bf-4768-bd6c-9198435dbf17",
+            "Value": {
+                "id": "bdda834a-b380-433e-bd02-61e416bd7433",
+                "resourcePath": "scripts\\MouseUpdate\\MouseUpdate.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -367,6 +407,14 @@
             }
         },
         {
+            "Key": "68e50d0d-02fb-4676-99ff-a20ae7a75444",
+            "Value": {
+                "id": "1dde8275-67ca-4409-a2b3-53935cf627a6",
+                "resourcePath": "rooms\\rmSolarSystemView\\rmSolarSystemView.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "6db3835b-c491-4292-9eb7-d6dbe7d22f35",
             "Value": {
                 "id": "09f5e114-ad27-4344-8581-da1a1ac91054",
@@ -420,6 +468,14 @@
                 "id": "75a863f4-542a-4d4a-b491-90547fce2050",
                 "resourcePath": "views\\821e7329-5993-4e11-98fd-c8cd211bf838.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "856139f3-6b7a-4391-baf8-b2d4153bdd16",
+            "Value": {
+                "id": "5a542e13-e494-4268-9f76-92750d9d43ed",
+                "resourcePath": "rooms\\rmPlanetView\\rmPlanetView.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -607,6 +663,14 @@
             }
         },
         {
+            "Key": "cded0d55-c901-4ed9-9573-a7220d71587a",
+            "Value": {
+                "id": "7b2b2a4c-ef0f-4ce0-a655-d6babd587744",
+                "resourcePath": "objects\\objPlanetView\\objPlanetView.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d0162abe-af8b-4e8c-9ef8-b00b97fefa76",
             "Value": {
                 "id": "d4358b5a-32d7-4927-a1e3-1100540deb0b",
@@ -679,6 +743,14 @@
             }
         },
         {
+            "Key": "eb5067fe-bd5e-4bac-890a-1b8af3d02976",
+            "Value": {
+                "id": "5e0aa88a-86df-4520-8ab9-ca7b615b5713",
+                "resourcePath": "objects\\objSolarSystemView\\objSolarSystemView.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "eb8da15d-3922-4806-9953-8e73965a3448",
             "Value": {
                 "id": "2668bbcb-34b8-4838-90f2-2bd4c3a13e21",
@@ -709,6 +781,14 @@
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
             }
+        },
+        {
+            "Key": "f6463843-35ae-463f-a990-0176cd60fde6",
+            "Value": {
+                "id": "1da5fdcd-b96f-4dec-835b-ee1944dd844c",
+                "resourcePath": "views\\f6463843-35ae-463f-a990-0176cd60fde6.yy",
+                "resourceType": "GMFolder"
+            }
         }
     ],
     "script_order": [
@@ -738,7 +818,8 @@
         "3640ba4c-f986-4c1a-9de7-0f5661d1f028",
         "2ed01de0-26d8-40c1-a96b-b17256359189",
         "d0e08af9-7c2b-467b-a925-0da2a894c5ff",
-        "d09fa83d-98b0-4eeb-bc8a-eaa1af62296f"
+        "d09fa83d-98b0-4eeb-bc8a-eaa1af62296f",
+        "51c40584-a9bf-4768-bd6c-9198435dbf17"
     ],
     "tutorial": ""
 }

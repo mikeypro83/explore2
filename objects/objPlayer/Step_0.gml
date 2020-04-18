@@ -12,24 +12,7 @@ if(global.oQuitButton.MouseOver && global.LMBIsReleased)
 // Global Input Updates
 /////////////////////////////////////////
 
-global.LMBIsHeld = global.LMBIsDown;
-global.MMBIsHeld = global.MMBIsDown;
-global.RMBIsHeld = global.RMBIsDown;
-global.LMBWasReleased = global.LMBIsReleased;
-global.MMBWasReleased = global.MMBIsReleased;
-global.RMBWasReleased = global.RMBIsReleased;
-global.LMBIsDown = mouse_check_button(mb_left);
-global.MMBIsDown = mouse_check_button(mb_middle);
-global.RMBIsDown = mouse_check_button(mb_right);
-global.LMBIsReleased = mouse_check_button_released(mb_left);
-global.MMBIsReleased = mouse_check_button_released(mb_middle);
-global.RMBIsReleased = mouse_check_button_released(mb_right);
-global.LMBIsHeld = global.LMBIsHeld && global.LMBIsDown && (global.LMBWasReleased==false);
-global.MMBIsHeld = global.MMBIsHeld && global.MMBIsDown && (global.MMBWasReleased==false);
-global.RMBIsHeld = global.RMBIsHeld && global.RMBIsDown && (global.RMBWasReleased==false);
-
-// TODO:  /\   See how these assignments do, if they don't act properly
-//		  ||  then figure out how to get them to behave.
+MouseUpdate();
 
 /////////////////////////////////////////
 // INPUT CONTROLS
@@ -53,16 +36,17 @@ global.WindowResized = false;
 
 if(keyboard_check_released(global.keyToggleFullscreen))
 {	
-	global.PrevViewW = get_activecam_vieww();
-	global.PrevViewH = get_activecam_viewh();
+	//global.PrevViewW = get_activecam_vieww();
+	//global.PrevViewH = get_activecam_viewh();
 	global.IsFullscreen = !global.IsFullscreen;
 	window_set_fullscreen(global.IsFullscreen);		
 	
 	
 	if(global.IsFullscreen)
 	{
-		// FOR SOME REASON view_camera[0] IS NOT THE SAME AS camera_get_active() 
-		// BUT THEY BOTH, BY DEFAULT, AFFECT THE SCREEN. FUH. 
+		// WARNING: FOR SOME REASON view_camera[0] IS NOT THE SAME AS camera_get_active() 
+		// BUT THEY BOTH, BY DEFAULT, AFFECT THE SCREEN, BUT ONLY view_camera[0] affects
+		// it CORRECTLY. dangit!
 		//
 		camera_set_view_size(view_camera[0], display_get_width(),display_get_height());
 		surface_resize(application_surface,display_get_width(),display_get_height());		
