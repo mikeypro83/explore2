@@ -330,7 +330,7 @@
             "Key": "556fe498-b5ab-4389-947d-3bc3b6a13f72",
             "Value": {
                 "id": "a0038dad-cd3f-4cd2-9786-58ca718af46a",
-                "resourcePath": "sprites\\sprite0\\sprite0.yy",
+                "resourcePath": "sprites\\sprPlanetM\\sprPlanetM.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -386,7 +386,7 @@
             "Key": "63ce21aa-83e4-4ee2-8897-c31ab3c64287",
             "Value": {
                 "id": "6d77de3c-c1e3-4aeb-9d7b-f02e3f2b9613",
-                "resourcePath": "sprites\\sprite1\\sprite1.yy",
+                "resourcePath": "sprites\\sprPlanetMClouds\\sprPlanetMClouds.yy",
                 "resourceType": "GMSprite"
             }
         },

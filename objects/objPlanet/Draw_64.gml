@@ -1,5 +1,5 @@
 /// @description Insert description here
-// You can write your code in this editor
+// TODO: Comment and clean up.
 
 _olcol = draw_get_color();
 _olal = draw_get_alpha();
